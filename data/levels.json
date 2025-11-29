@@ -1,0 +1,17 @@
+[
+  {
+	"id": 1,
+	"level_order": 1,
+	"name": "Easy"
+  },
+  {
+	"id": 2,
+	"level_order": 2,
+	"name": "Normal"
+  },
+  {
+	"id": 3,
+	"level_order": 3,
+	"name": "Hard"
+  }
+]

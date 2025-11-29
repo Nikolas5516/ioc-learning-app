@@ -1,0 +1,14 @@
+[[
+  {
+	"id": 1,
+	"level_id": 1,
+	"question_text": "Care este capitala României?",
+	"option_a": "București",
+	"option_b": "Cluj-Napoca",
+	"option_c": "Iași",
+	"option_d": "Timișoara",
+	"correct_option": "A",
+	"attempts_allowed": 3,
+	"points": 10
+  }
+]]

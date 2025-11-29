@@ -1,0 +1,22 @@
+# Backgrounds – UI DinoEdu
+
+Acest folder conține toate imaginile de fundal folosite în aplicație.
+
+## 🟦 Background-uri meniu / hub
+- **bg_main_menu.png** – folosit în scena MeniuPrincipal.tscn
+- **bg_hub.png** – fundal pentru pagina cu setări / magazin / select niveluri
+
+## 🟩 Background-uri pentru întrebări
+Background-urile sunt organizate pe dificultăți:
+- **bg_easy.png** – pentru toate întrebările nivelului ușor
+- **bg_medium.png** – pentru toate întrebările nivelului mediu
+- **bg_hard.png** – pentru toate întrebările nivelului greu
+
+## 🔧 Notă pentru dezvoltatori
+Toate background-urile sunt setate astfel în Godot:
+- Node: `TextureRect`
+- Anchors: **Full Rect**
+- Expand Mode: **Fit Height Proportional**
+- Stretch Mode: **Scale**
+
+Acest setup asigură că imaginile își păstrează proporțiile pe orice rezoluție de tabletă și acoperă ecranul complet.

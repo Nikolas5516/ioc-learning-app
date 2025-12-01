@@ -21,6 +21,10 @@ window/size/viewport_width=1280
 window/size/viewport_height=723
 window/stretch/mode="canvas_items"
 
+[autoload]
+
+DataManager="*res://scripts/managers/data_manager.gd"
+
 [rendering]
 
 renderer/rendering_method="mobile"

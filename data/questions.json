@@ -1,0 +1,135 @@
+[
+  {
+	"id": 1,
+	"level_id": 1,
+	"question_type": "multiple_choice",
+	"question_text": "Care este capitala României?",
+	"option_a": "București",
+	"option_b": "Cluj-Napoca",
+	"option_c": "Iași",
+	"option_d": "Timișoara",
+	"correct_option": "A",
+	"attempts_allowed": 3,
+	"points": 10
+  },
+  {
+	"id": 7,
+	"level_id": 7,
+	"question_type": "flashcard",
+	"correct_statement": "Relieful României este alcătuit din munți, dealuri, podișuri și câmpii.",
+	"false_statement": "Relieful României este alcătuit doar din câmpii întinse.",
+	"points": 10
+  },
+  {
+	"id": 8,
+	"level_id": 7,
+	"question_type": "flashcard",
+	"correct_statement": "Munții reprezintă cea mai înaltă treaptă de relief din România.",
+	"false_statement": "Câmpiile reprezintă cea mai înaltă treaptă de relief din România.",
+	"points": 10
+  },
+  {
+	"id": 9,
+	"level_id": 7,
+	"question_type": "flashcard",
+	"correct_statement": "Câmpiile sunt cea mai joasă treaptă de relief din România.",
+	"false_statement": "Munții sunt cea mai joasă treaptă de relief din România.",
+	"points": 10
+  },
+  {
+	"id": 10,
+	"level_id": 7,
+	"question_type": "flashcard",
+	"correct_statement": "Munții Carpați se află în partea centrală a României.",
+	"false_statement": "Munții Carpați se află exclusiv în partea de est a României.",
+	"points": 10
+  },
+  {
+	"id": 11,
+	"level_id": 7,
+	"question_type": "flashcard",
+	"correct_statement": "Cele trei trepte de relief ale României ocupă suprafețe aproximativ egale.",
+	"false_statement": "Câmpiile acoperă aproape întreaga suprafață a României.",
+	"points": 15
+  },
+  {
+	"id": 12,
+	"level_id": 7,
+	"question_type": "flashcard",
+	"correct_statement": "Munții Carpați formează un inel în jurul depresiunii din interiorul țării.",
+	"false_statement": "Munții Carpați formează o câmpie continuă în centrul țării.",
+	"points": 15
+  },
+  {
+	"id": 13,
+	"level_id": 7,
+	"question_type": "flashcard",
+	"correct_statement": "Dealurile și podișurile înconjoară exteriorul Munților Carpați.",
+	"false_statement": "Câmpiile înconjoară direct Munții Carpați, fără zone de dealuri sau podișuri.",
+	"points": 15
+  },
+  {
+	"id": 14,
+	"level_id": 7,
+	"question_type": "flashcard",
+	"correct_statement": "Podișul Moldovei este cel mai întins podiș al României.",
+	"false_statement": "Podișul Mehedinți este cel mai întins podiș al României.",
+	"points": 15
+  },
+  {
+	"id": 15,
+	"level_id": 8,
+	"question_type": "flashcard",
+	"correct_statement": "Subcarpații sunt un rând de dealuri situate între munți și câmpii.",
+	"false_statement": "Subcarpații sunt o câmpie situată în interiorul arcului carpatic.",
+	"points": 10
+  },
+  {
+	"id": 16,
+	"level_id": 8,
+	"question_type": "flashcard",
+	"correct_statement": "Câmpiile se întind în exteriorul zonei de dealuri și podișuri.",
+	"false_statement": "Câmpiile se află în centrul țării, fiind înconjurate de munți.",
+	"points": 10
+  },
+  {
+	"id": 17,
+	"level_id": 8,
+	"question_type": "flashcard",
+	"correct_statement": "Carpații Românești sunt formați din trei ramuri: Orientali, Meridionali și Occidentali.",
+	"false_statement": "Carpații Românești sunt formați din două ramuri: Carpații Nordici și Carpații Sudici.",
+	"points": 15
+  },
+  {
+	"id": 18,
+	"level_id": 8,
+	"question_type": "flashcard",
+	"correct_statement": "Depresiunea Colinară a Transilvaniei se află în interiorul arcului carpatic.",
+	"false_statement": "Depresiunea Colinară a Transilvaniei se află în exteriorul arcului carpatic.",
+	"points": 15
+  },
+  {
+	"id": 19,
+	"level_id": 8,
+	"question_type": "flashcard",
+	"correct_statement": "Subcarpații pot depăși uneori 1 000 m în înălțime, deși sunt considerați dealuri.",
+	"false_statement": "Subcarpații nu depășesc niciodată 100 m în înălțime.",
+	"points": 15
+  },
+  {
+	"id": 20,
+	"level_id": 8,
+	"question_type": "flashcard",
+	"correct_statement": "Podișul Dobrogei cuprinde atât dealuri vechi, cât și podișuri foarte joase.",
+	"false_statement": "Podișul Dobrogei este alcătuit exclusiv din munți înalți de peste 2 000 m.",
+	"points": 15
+  },
+  {
+	"id": 21,
+	"level_id": 8,
+	"question_type": "flashcard",
+	"correct_statement": "Dealurile de Vest fac trecerea între Carpații Occidentali și Câmpia de Vest.",
+	"false_statement": "Dealurile de Vest se află între Carpații Meridionali și Marea Neagră.",
+	"points": 10
+  }
+]

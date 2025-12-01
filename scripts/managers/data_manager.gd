@@ -9,7 +9,7 @@ func _ready():
 	load_levels()
 	load_questions()
 	# Uncomment pentru a rula teste automat la pornire
-	test_data_manager()
+	#test_data_manager()
 
 # ===== LOADING FUNCTIONS =====
 func load_levels():

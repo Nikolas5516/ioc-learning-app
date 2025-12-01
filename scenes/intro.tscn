@@ -1,3 +1,72 @@
-[gd_scene format=3 uid="uid://cciyskle4w08c"]
+[gd_scene load_steps=9 format=3 uid="uid://cciyskle4w08c"]
 
-[node name="Intro" type="Node2D"]
+[ext_resource type="Script" uid="uid://ci8pie45mi3sx" path="res://scenes/intro.gd" id="1_bu1yb"]
+[ext_resource type="Texture2D" uid="uid://k7ru624pqjsh" path="res://assets/sprites/Gemini_Generated_Image_lk47nklk47nklk47.png" id="2_t1qkj"]
+[ext_resource type="Texture2D" uid="uid://2bcoe1pa8vpb" path="res://assets/sprites/Gemini_Generated_Image_188kqn188kqn188k-removebg-preview.png" id="3_272cy"]
+[ext_resource type="Texture2D" uid="uid://bgeyhkr47lsk3" path="res://assets/sprites/Gemini_Generated_Image_2yeqlf2yeqlf2yeq-removebg-preview.png" id="4_37iue"]
+[ext_resource type="Texture2D" uid="uid://ds7oteh5rdrpd" path="res://assets/sprites/Gemini_Generated_Image_wp9pd1wp9pd1wp9p-removebg-preview.png" id="5_n6p8m"]
+[ext_resource type="Texture2D" uid="uid://dnsg4cuxq5awg" path="res://assets/sprites/Gemini_Generated_Image_w80jq3w80jq3w80j-removebg-preview (1).png" id="6_m3r7s"]
+[ext_resource type="Texture2D" uid="uid://c4a62qoaef086" path="res://assets/sprites/Gemini_Generated_Image_jbotsujbotsujbot-removebg-preview (1).png" id="7_xwriy"]
+[ext_resource type="Texture2D" uid="uid://dna0wa565jj28" path="res://assets/sprites/Gemini_Generated_Image_saukqksaukqksauk-removebg-preview.png" id="8_u5myo"]
+
+[node name="Intro" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.34671807, 0.24578047)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+script = ExtResource("1_bu1yb")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -600.0
+offset_top = -846.0
+offset_right = 648.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_t1qkj")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = -150.00002
+offset_top = -1217.0
+offset_right = 484.28564
+offset_bottom = 1078.7144
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.7, 0.7)
+mouse_filter = 2
+theme_override_constants/separation = -93
+alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Button" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_272cy")
+texture_pressed = ExtResource("4_37iue")
+texture_hover = ExtResource("5_n6p8m")
+metadata/_edit_lock_ = true
+
+[node name="TextureButton" type="TextureButton" parent="VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_m3r7s")
+texture_pressed = ExtResource("7_xwriy")
+texture_hover = ExtResource("8_u5myo")
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_play_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/TextureButton" to="." method="_exit_button_pressed"]

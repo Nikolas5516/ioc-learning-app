@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpk3e0hknqacw"
-path="res://.godot/imported/bucovina.png-bf1a055de06acc9493960a7e54f9072f.ctex"
+uid="uid://bl5ji1a47usxe"
+path="res://.godot/imported/banat.png-7ee0e3fbe166bcff75499f2aed06d07b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/EasyLevel/assets/bucovina.png"
-dest_files=["res://.godot/imported/bucovina.png-bf1a055de06acc9493960a7e54f9072f.ctex"]
+source_file="res://assets/sprites/banat.png"
+dest_files=["res://.godot/imported/banat.png-7ee0e3fbe166bcff75499f2aed06d07b.ctex"]
 
 [params]
 

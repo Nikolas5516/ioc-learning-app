@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://beoge6bx8yb1m"
-path="res://.godot/imported/munte mare.png-9d5bd5d8640105146a5652b0f3cc80c0.ctex"
+uid="uid://bgdx5s28ub33p"
+path="res://.godot/imported/oltenia.png-da0cd3e47a2026571af3cbe708870bfa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/EasyLevel/assets/munte mare.png"
-dest_files=["res://.godot/imported/munte mare.png-9d5bd5d8640105146a5652b0f3cc80c0.ctex"]
+source_file="res://assets/sprites/oltenia.png"
+dest_files=["res://.godot/imported/oltenia.png-da0cd3e47a2026571af3cbe708870bfa.ctex"]
 
 [params]
 

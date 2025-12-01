@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cldacpapw18ta"
-path="res://.godot/imported/transilvania.png-d51a45216e8bec00bbf09164072c9ccb.ctex"
+uid="uid://c035hp4u1jh7v"
+path="res://.godot/imported/moldova.png-546f7a7621cb7e83839bc40d05df26fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/EasyLevel/assets/transilvania.png"
-dest_files=["res://.godot/imported/transilvania.png-d51a45216e8bec00bbf09164072c9ccb.ctex"]
+source_file="res://assets/sprites/moldova.png"
+dest_files=["res://.godot/imported/moldova.png-546f7a7621cb7e83839bc40d05df26fc.ctex"]
 
 [params]
 

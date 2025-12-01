@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ciai374bv5oxw"
-path="res://.godot/imported/maramu.png-8754605ccbf930ad402aac00709b35e9.ctex"
+path="res://.godot/imported/maramu.png-ef479c77407215315909de95a1ca29bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/EasyLevel/assets/maramu.png"
-dest_files=["res://.godot/imported/maramu.png-8754605ccbf930ad402aac00709b35e9.ctex"]
+source_file="res://assets/sprites/maramu.png"
+dest_files=["res://.godot/imported/maramu.png-ef479c77407215315909de95a1ca29bb.ctex"]
 
 [params]
 

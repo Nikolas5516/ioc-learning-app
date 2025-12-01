@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1nan8gno2brf"]
+
+[ext_resource type="Texture2D" uid="uid://cerugd04lp7ln" path="res://assets/sprites/lvl_usor.png" id="1_drj2f"]
+[ext_resource type="PackedScene" uid="uid://bv7qrbffhrink" path="res://scenes/UI/components/TopBar.tscn" id="2_6hj5s"]
+
+[node name="Bg_Lvl_usor" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_drj2f")
+expand_mode = 5
+
+[node name="TopBar" parent="." instance=ExtResource("2_6hj5s")]
+layout_mode = 1

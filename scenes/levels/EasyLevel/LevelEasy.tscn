@@ -1,0 +1,158 @@
+[gd_scene load_steps=13 format=3 uid="uid://dyv8kinim5k01"]
+
+[ext_resource type="Texture2D" uid="uid://cerugd04lp7ln" path="res://assets/sprites/lvl_usor.png" id="1_2j6gu"]
+[ext_resource type="PackedScene" uid="uid://h7xcghta0b3q" path="res://objects/RegiuneBase.tscn" id="1_xtd4k"]
+[ext_resource type="Texture2D" uid="uid://cpk3e0hknqacw" path="res://scenes/levels/EasyLevel/assets/bucovina.png" id="2_4urcp"]
+[ext_resource type="Texture2D" uid="uid://c035hp4u1jh7v" path="res://scenes/levels/EasyLevel/assets/moldova.png" id="4_cbooi"]
+[ext_resource type="Texture2D" uid="uid://cldacpapw18ta" path="res://scenes/levels/EasyLevel/assets/transilvania.png" id="5_sacmm"]
+[ext_resource type="Texture2D" uid="uid://bwfsgr0bmvnc6" path="res://scenes/levels/EasyLevel/assets/dobrogea.png" id="6_ctr4m"]
+[ext_resource type="Texture2D" uid="uid://ciai374bv5oxw" path="res://scenes/levels/EasyLevel/assets/maramu.png" id="7_snwl5"]
+[ext_resource type="Texture2D" uid="uid://bpv8qeuurcvuq" path="res://scenes/levels/EasyLevel/assets/crisana.png" id="8_4urcp"]
+[ext_resource type="Texture2D" uid="uid://bgdx5s28ub33p" path="res://scenes/levels/EasyLevel/assets/oltenia.png" id="9_cbooi"]
+[ext_resource type="Texture2D" uid="uid://bl5ji1a47usxe" path="res://scenes/levels/EasyLevel/assets/banat.png" id="10_sacmm"]
+[ext_resource type="Texture2D" uid="uid://nq22tb78872y" path="res://scenes/levels/EasyLevel/assets/Muntenia.png" id="11_snwl5"]
+[ext_resource type="Texture2D" uid="uid://beoge6bx8yb1m" path="res://scenes/levels/EasyLevel/assets/munte mare.png" id="12_bh6dk"]
+
+[node name="LevelEasy" type="Node2D"]
+
+[node name="BckHartaEasy" type="Sprite2D" parent="."]
+texture = ExtResource("1_2j6gu")
+
+[node name="Bucovina" parent="." instance=ExtResource("1_xtd4k")]
+z_index = 1
+
+[node name="SpriteRegiune" parent="Bucovina" index="0"]
+position = Vector2(-41, -231)
+texture = ExtResource("2_4urcp")
+
+[node name="CollisionRegiune" parent="Bucovina" index="1"]
+polygon = PackedVector2Array(-116, -256, -100, -259, -86, -283, 1, -299, 11, -291, -8, -280, 12, -258, 22, -235, -14, -225, -27, -221, -25, -199, -50, -227, -60, -222, -75, -240, -95, -216, -98, -251)
+
+[node name="Moldova" parent="." instance=ExtResource("1_xtd4k")]
+z_index = 1
+
+[node name="SpriteRegiune" parent="Moldova" index="0"]
+position = Vector2(89, -123)
+texture = ExtResource("4_cbooi")
+
+[node name="CollisionRegiune" parent="Moldova" index="1"]
+polygon = PackedVector2Array(15, -280, 25, -295, 26, -326, 66, -339, 128, -232, 203, -144, 228, -94, 212, -34, 219, 40, 224, 78, 197, 84, 153, 62, 97, 34, 64, 56, 61, -18, 23, -79, 31, -140, 11, -178, -10, -208, 25, -220, 67, -227, 32, -255)
+
+[node name="Transilvania" parent="." instance=ExtResource("1_xtd4k")]
+z_index = 1
+
+[node name="SpriteRegiune" parent="Transilvania" index="0"]
+position = Vector2(-170, -52)
+texture = ExtResource("5_sacmm")
+
+[node name="CollisionRegiune" parent="Transilvania" index="1"]
+polygon = PackedVector2Array(-244, 92, -217, 72, -155, 66, -94, 68, -40, 11, 1, -15, 33, -13, -23, -86, -158, -93, -188, -156, -120, -190, -144, -219, -217, -218, -268, -189, -286, -143, -325, -124, -329, -83, -326, -60, -301, -11, -306, 10, -374, 15, -350, 47, -308, 34, -291, 64)
+
+[node name="Dobrogea" parent="." instance=ExtResource("1_xtd4k")]
+z_index = 1
+
+[node name="SpriteRegiune" parent="Dobrogea" index="0"]
+position = Vector2(276, 215)
+texture = ExtResource("6_ctr4m")
+
+[node name="CollisionRegiune" parent="Dobrogea" index="1"]
+polygon = PackedVector2Array(293, 343, 300, 277, 294, 259, 338, 190, 394, 167, 389, 90, 329, 96, 298, 112, 274, 122, 243, 87, 225, 108, 257, 150, 240, 195, 245, 243, 224, 280, 168, 301, 219, 307)
+
+[node name="Maramu" parent="." instance=ExtResource("1_xtd4k")]
+z_index = 1
+
+[node name="SpriteRegiune" parent="Maramu" index="0"]
+position = Vector2(-142, -269)
+texture = ExtResource("7_snwl5")
+
+[node name="CollisionRegiune" parent="Maramu" index="1"]
+polygon = PackedVector2Array(-346, -269, -320, -295, -303, -308, -268, -283, -198, -277, -161, -284, -111, -236, -143, -238, -190, -230, -214, -253, -233, -249, -241, -220, -272, -208, -315, -220)
+
+[node name="Crisana" parent="." instance=ExtResource("1_xtd4k")]
+z_index = 1
+
+[node name="SpriteRegiune" parent="Crisana" index="0"]
+position = Vector2(-417, -125)
+texture = ExtResource("8_4urcp")
+
+[node name="CollisionRegiune" parent="Crisana" index="1"]
+polygon = PackedVector2Array(-369, -261, -330, -207, -288, -193, -304, -151, -357, -144, -360, -35, -324, -14, -340, -9, -376, -7, -386, 11, -471, -16, -521, -19, -431, -146, -406, -218)
+
+[node name="Oltenia" parent="." instance=ExtResource("1_xtd4k")]
+z_index = 1
+
+[node name="SpriteRegiune" parent="Oltenia" index="0"]
+position = Vector2(-245, 229)
+texture = ExtResource("9_cbooi")
+
+[node name="CollisionRegiune" parent="Oltenia" index="1"]
+polygon = PackedVector2Array(-374, 256, -306, 307, -323, 336, -256, 342, -164, 358, -140, 343, -187, 246, -193, 169, -181, 145, -199, 94, -248, 127, -308, 154, -348, 148, -371, 203, -339, 231, -336, 249)
+
+[node name="Banat" parent="." instance=ExtResource("1_xtd4k")]
+z_index = 1
+
+[node name="SpriteRegiune" parent="Banat" index="0"]
+position = Vector2(-486, 114)
+texture = ExtResource("10_sacmm")
+
+[node name="CollisionRegiune" parent="Banat" index="1"]
+polygon = PackedVector2Array(-596, -11, -538, 9, -433, 6, -393, 26, -390, 66, -385, 127, -385, 171, -403, 215, -414, 242, -439, 205, -467, 209, -480, 190, -471, 175, -492, 163, -477, 128, -550, 88, -549, 38)
+
+[node name="Muntenia" parent="." instance=ExtResource("1_xtd4k")]
+z_index = 1
+
+[node name="SpriteRegiune" parent="Muntenia" index="0"]
+position = Vector2(26, 212)
+texture = ExtResource("11_snwl5")
+
+[node name="CollisionRegiune" parent="Muntenia" index="1"]
+polygon = PackedVector2Array(-174, 91, -165, 148, -178, 199, -166, 232, -170, 250, -114, 352, -14, 355, 39, 306, 135, 280, 217, 257, 211, 214, 196, 199, 223, 179, 222, 125, 109, 62, 80, 76, 69, 117, -64, 124, -92, 86)
+
+[node name="MunteMare" parent="." instance=ExtResource("1_xtd4k")]
+z_index = 1
+
+[node name="SpriteRegiune" parent="MunteMare" index="0"]
+position = Vector2(-75.99999, -177.99998)
+scale = Vector2(0.75795054, 0.76609445)
+texture = ExtResource("12_bh6dk")
+
+[node name="CollisionRegiune" parent="MunteMare" index="1"]
+polygon = PackedVector2Array(-158, -143, -135, -170, -122, -160, -108, -186, -102, -183, -97, -200, -94, -193, -90, -205, -87, -202, -76, -225, -38, -172, -26, -178, -14, -159, -1, -163, 11, -145, 5, -116, -31, -102, -93, -99, -132, -103, -166, -141)
+
+[node name="MunteMediu" parent="." instance=ExtResource("1_xtd4k")]
+z_index = 1
+
+[node name="SpriteRegiune" parent="MunteMediu" index="0"]
+position = Vector2(-9.999996, 42)
+scale = Vector2(0.6245584, 0.62124467)
+texture = ExtResource("12_bh6dk")
+
+[node name="CollisionRegiune" parent="MunteMediu" index="1"]
+polygon = PackedVector2Array(-85, 72, -60, 49, -47, 56, -11, 2, 19, 47, 31, 41, 42, 57, 52, 54, 59, 69, 55, 93, 20, 107, -45, 101)
+
+[node name="MunteMic" parent="." instance=ExtResource("1_xtd4k")]
+z_index = 1
+position = Vector2(-11, 7)
+
+[node name="SpriteRegiune" parent="MunteMic" index="0"]
+position = Vector2(-314, 78)
+scale = Vector2(0.46113074, 0.48712447)
+texture = ExtResource("12_bh6dk")
+
+[node name="CollisionRegiune" parent="MunteMic" index="1"]
+polygon = PackedVector2Array(-371, 102, -350, 83, -344, 89, -334, 73, -313, 47, -295, 84, -283, 76, -273, 91, -267, 87, -255, 100, -270, 117, -289, 125, -320, 128, -356, 123)
+
+[node name="CameraLvlEasy" type="Camera2D" parent="."]
+
+[editable path="Bucovina"]
+[editable path="Moldova"]
+[editable path="Transilvania"]
+[editable path="Dobrogea"]
+[editable path="Maramu"]
+[editable path="Crisana"]
+[editable path="Oltenia"]
+[editable path="Banat"]
+[editable path="Muntenia"]
+[editable path="MunteMare"]
+[editable path="MunteMediu"]
+[editable path="MunteMic"]

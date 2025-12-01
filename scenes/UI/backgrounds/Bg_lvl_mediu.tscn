@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://d2fujnys4bf5t"]
+
+[ext_resource type="Texture2D" uid="uid://8u36mc5y0tp5" path="res://assets/sprites/lvl_mediu.png" id="1_b8j3w"]
+[ext_resource type="PackedScene" uid="uid://bv7qrbffhrink" path="res://scenes/UI/components/TopBar.tscn" id="2_686ev"]
+
+[node name="Bg_lvl_mediu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_b8j3w")
+expand_mode = 5
+
+[node name="TopBar" parent="." instance=ExtResource("2_686ev")]
+layout_mode = 1

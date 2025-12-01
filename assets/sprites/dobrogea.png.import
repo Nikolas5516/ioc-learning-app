@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nq22tb78872y"
-path="res://.godot/imported/Muntenia.png-07e10628b197a185828b8d96af1afce0.ctex"
+uid="uid://bwfsgr0bmvnc6"
+path="res://.godot/imported/dobrogea.png-e72a6c5b4871698df663aa291930c1e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/EasyLevel/assets/Muntenia.png"
-dest_files=["res://.godot/imported/Muntenia.png-07e10628b197a185828b8d96af1afce0.ctex"]
+source_file="res://assets/sprites/dobrogea.png"
+dest_files=["res://.godot/imported/dobrogea.png-e72a6c5b4871698df663aa291930c1e9.ctex"]
 
 [params]
 

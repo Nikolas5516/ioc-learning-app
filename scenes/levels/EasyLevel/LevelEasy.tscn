@@ -1,22 +1,18 @@
-[gd_scene load_steps=13 format=3 uid="uid://dyv8kinim5k01"]
+[gd_scene load_steps=12 format=3 uid="uid://dyv8kinim5k01"]
 
-[ext_resource type="Texture2D" uid="uid://cerugd04lp7ln" path="res://assets/sprites/lvl_usor.png" id="1_2j6gu"]
 [ext_resource type="PackedScene" uid="uid://h7xcghta0b3q" path="res://objects/RegiuneBase.tscn" id="1_xtd4k"]
-[ext_resource type="Texture2D" uid="uid://cpk3e0hknqacw" path="res://scenes/levels/EasyLevel/assets/bucovina.png" id="2_4urcp"]
-[ext_resource type="Texture2D" uid="uid://c035hp4u1jh7v" path="res://scenes/levels/EasyLevel/assets/moldova.png" id="4_cbooi"]
-[ext_resource type="Texture2D" uid="uid://cldacpapw18ta" path="res://scenes/levels/EasyLevel/assets/transilvania.png" id="5_sacmm"]
-[ext_resource type="Texture2D" uid="uid://bwfsgr0bmvnc6" path="res://scenes/levels/EasyLevel/assets/dobrogea.png" id="6_ctr4m"]
-[ext_resource type="Texture2D" uid="uid://ciai374bv5oxw" path="res://scenes/levels/EasyLevel/assets/maramu.png" id="7_snwl5"]
-[ext_resource type="Texture2D" uid="uid://bpv8qeuurcvuq" path="res://scenes/levels/EasyLevel/assets/crisana.png" id="8_4urcp"]
-[ext_resource type="Texture2D" uid="uid://bgdx5s28ub33p" path="res://scenes/levels/EasyLevel/assets/oltenia.png" id="9_cbooi"]
-[ext_resource type="Texture2D" uid="uid://bl5ji1a47usxe" path="res://scenes/levels/EasyLevel/assets/banat.png" id="10_sacmm"]
-[ext_resource type="Texture2D" uid="uid://nq22tb78872y" path="res://scenes/levels/EasyLevel/assets/Muntenia.png" id="11_snwl5"]
-[ext_resource type="Texture2D" uid="uid://beoge6bx8yb1m" path="res://scenes/levels/EasyLevel/assets/munte mare.png" id="12_bh6dk"]
+[ext_resource type="Texture2D" uid="uid://cpk3e0hknqacw" path="res://assets/sprites/bucovina.png" id="2_4urcp"]
+[ext_resource type="Texture2D" uid="uid://c035hp4u1jh7v" path="res://assets/sprites/moldova.png" id="4_cbooi"]
+[ext_resource type="Texture2D" uid="uid://cldacpapw18ta" path="res://assets/sprites/transilvania.png" id="5_sacmm"]
+[ext_resource type="Texture2D" uid="uid://bwfsgr0bmvnc6" path="res://assets/sprites/dobrogea.png" id="6_ctr4m"]
+[ext_resource type="Texture2D" uid="uid://ciai374bv5oxw" path="res://assets/sprites/maramu.png" id="7_snwl5"]
+[ext_resource type="Texture2D" uid="uid://bpv8qeuurcvuq" path="res://assets/sprites/crisana.png" id="8_4urcp"]
+[ext_resource type="Texture2D" uid="uid://bgdx5s28ub33p" path="res://assets/sprites/oltenia.png" id="9_cbooi"]
+[ext_resource type="Texture2D" uid="uid://bl5ji1a47usxe" path="res://assets/sprites/banat.png" id="10_sacmm"]
+[ext_resource type="Texture2D" uid="uid://nq22tb78872y" path="res://assets/sprites/Muntenia.png" id="11_snwl5"]
+[ext_resource type="Texture2D" uid="uid://beoge6bx8yb1m" path="res://assets/sprites/munte mare.png" id="12_bh6dk"]
 
 [node name="LevelEasy" type="Node2D"]
-
-[node name="BckHartaEasy" type="Sprite2D" parent="."]
-texture = ExtResource("1_2j6gu")
 
 [node name="Bucovina" parent="." instance=ExtResource("1_xtd4k")]
 z_index = 1

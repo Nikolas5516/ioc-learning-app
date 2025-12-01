@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl5ji1a47usxe"
-path="res://.godot/imported/banat.png-3a60101722ae4c68aeb4212d6305b0fe.ctex"
+uid="uid://cldacpapw18ta"
+path="res://.godot/imported/transilvania.png-7b0056aae2f2c831f7287dfd27c547de.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/EasyLevel/assets/banat.png"
-dest_files=["res://.godot/imported/banat.png-3a60101722ae4c68aeb4212d6305b0fe.ctex"]
+source_file="res://assets/sprites/transilvania.png"
+dest_files=["res://.godot/imported/transilvania.png-7b0056aae2f2c831f7287dfd27c547de.ctex"]
 
 [params]
 

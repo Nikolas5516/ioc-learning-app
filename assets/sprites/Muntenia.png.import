@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpv8qeuurcvuq"
-path="res://.godot/imported/crisana.png-bd91a1ed2165c2a15bb9bcfae04ff788.ctex"
+uid="uid://nq22tb78872y"
+path="res://.godot/imported/Muntenia.png-5f17fc77db3eeb94fbefa3250057f974.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/levels/EasyLevel/assets/crisana.png"
-dest_files=["res://.godot/imported/crisana.png-bd91a1ed2165c2a15bb9bcfae04ff788.ctex"]
+source_file="res://assets/sprites/Muntenia.png"
+dest_files=["res://.godot/imported/Muntenia.png-5f17fc77db3eeb94fbefa3250057f974.ctex"]
 
 [params]
 

@@ -1,0 +1,160 @@
+[gd_scene load_steps=18 format=3 uid="uid://d3eacjgjm6nbg"]
+
+[ext_resource type="Script" uid="uid://dfbxso7m0nrnu" path="res://scenes/meniuprincipal.gd" id="1_r75mj"]
+[ext_resource type="Texture2D" uid="uid://q4ro38hddox2" path="res://assets/sprites/Gemini_Generated_Image_mk4fp5mk4fp5mk4f.png" id="2_utjw1"]
+[ext_resource type="Texture2D" uid="uid://s2yupchq0mlh" path="res://assets/sprites/Gemini_Generated_Image_sxytj3sxytj3sxyt-removebg-preview.png" id="3_4yg04"]
+[ext_resource type="Texture2D" uid="uid://d2nw3neyyr5vm" path="res://assets/sprites/Gemini_Generated_Image_b9uztxb9uztxb9uz-removebg-preview.png" id="3_srg33"]
+[ext_resource type="Texture2D" uid="uid://bfbb22vgvx0cf" path="res://assets/sprites/Gemini_Generated_Image_oht91uoht91uoht9-removebg-preview.png" id="5_6kjbh"]
+[ext_resource type="Texture2D" uid="uid://dle30j3vaddi" path="res://assets/sprites/Gemini_Generated_Image_2stjih2stjih2stj-removebg-preview.png" id="6_71ioe"]
+[ext_resource type="Texture2D" uid="uid://coflq7p7p1dwb" path="res://assets/sprites/Gemini_Generated_Image_jvwnzhjvwnzhjvwn-removebg-preview.png" id="7_ru4ck"]
+[ext_resource type="Texture2D" uid="uid://dt1nmdotxqseh" path="res://assets/sprites/Gemini_Generated_Image_9h0b0m9h0b0m9h0b-removebg-preview (1).png" id="8_orh1u"]
+[ext_resource type="PackedScene" uid="uid://b4qa5upc5qico" path="res://scenes/DinoTextBox.tscn" id="9_6kjbh"]
+[ext_resource type="Texture2D" uid="uid://b7fklcwnh7ia2" path="res://assets/sprites/Gemini_Generated_Image_jztwxtjztwxtjztw-removebg-preview.png" id="10_jmxhm"]
+[ext_resource type="Texture2D" uid="uid://caxsayni05c0c" path="res://assets/sprites/Gemini_Generated_Image_puhdmjpuhdmjpuhd-removebg-preview.png" id="11_i36jf"]
+[ext_resource type="Texture2D" uid="uid://dn47nfripasdx" path="res://assets/sprites/Gemini_Generated_Image_i4suzii4suzii4su-removebg-preview.png" id="12_a61ng"]
+[ext_resource type="Texture2D" uid="uid://dtt5bs7w17hdm" path="res://assets/sprites/Gemini_Generated_Image_wblzccwblzccwblz-removebg-preview.png" id="13_swdcf"]
+[ext_resource type="Texture2D" uid="uid://dfcq3f2e4u2pd" path="res://assets/sprites/Gemini_Generated_Image_kj6l0ikj6l0ikj6l-removebg-preview.png" id="14_l6dl7"]
+[ext_resource type="Texture2D" uid="uid://dvykr522nj7ih" path="res://assets/sprites/Gemini_Generated_Image_my27zvmy27zvmy27-removebg-preview.png" id="15_mhfbr"]
+
+[sub_resource type="Curve2D" id="Curve2D_a62jb"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 35.351624, 371.8108, 0, 0, 0, 0, -19.885254, 371.8108, 0, 0, 0, 0, -69.59845, 363.32202, 0, 0, 0, 0, -131.46368, 351.43762, 0, 0, 0, 0, -202.16687, 339.55328, 0, 0, 0, 0, -259.61322, 339.55328, 0, 0, 0, 0, -317.0595, 339.55328, 0, 0, 0, 0, -366.77264, 300.50464, 0, 0, 0, 0, -410.96216, 288.6203, 0, 0, 0, 0, -457.36108, 271.64264, 0, 0, 0, 0, -517.0169, 259.75824, 0, 0, 0, 0, -626.38586, 244.4784, 0, 0, 0, 0, -535.7974, 183.35876, 0, 0, 0, 0, -478.35107, 132.42578, 0, 0, 0, 0, -405.43848, -11.884338, 0, 0, 0, 0, -420.9048, -73.00397)
+}
+point_count = 16
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i2e7g"]
+
+[node name="Meniuprincipal" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_r75mj")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(650, 400)
+rotation = -3.1415927
+scale = Vector2(1.2827034, -0.5508779)
+texture = ExtResource("2_utjw1")
+metadata/_edit_lock_ = true
+
+[node name="LevelMap" type="Node2D" parent="."]
+
+[node name="Path2D" type="Path2D" parent="LevelMap"]
+position = Vector2(900, 400)
+scale = Vector2(0.90519285, 0.58900917)
+curve = SubResource("Curve2D_a62jb")
+
+[node name="lvl1" type="PathFollow2D" parent="LevelMap/Path2D"]
+position = Vector2(35.351624, 371.8108)
+rotation = 3.1415927
+scale = Vector2(0.99999994, 1)
+
+[node name="Level 1" type="TextureButton" parent="LevelMap/Path2D/lvl1"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(-0.2774579, -0.19892998)
+texture_normal = ExtResource("3_4yg04")
+
+[node name="lvl2" type="PathFollow2D" parent="LevelMap/Path2D"]
+position = Vector2(-261.78964, 339.55328)
+rotation = 3.1415927
+progress = 300.0
+
+[node name="Level 2" type="TextureButton" parent="LevelMap/Path2D/lvl2"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(-0.30944866, -0.24915837)
+texture_normal = ExtResource("3_srg33")
+
+[node name="lvl3" type="PathFollow2D" parent="LevelMap/Path2D"]
+position = Vector2(-444.59705, 276.31308)
+rotation = -2.7908182
+progress = 500.0
+
+[node name="Level 3" type="TextureButton" parent="LevelMap/Path2D/lvl3"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(-0.26215538, -0.28559908)
+texture_normal = ExtResource("8_orh1u")
+
+[node name="lvl4" type="PathFollow2D" parent="LevelMap/Path2D"]
+position = Vector2(-572.46655, 208.09926)
+rotation = -0.5935406
+progress = 750.0
+
+[node name="Level 4" type="TextureButton" parent="LevelMap/Path2D/lvl4"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.26095173, 0.21412183)
+texture_normal = ExtResource("5_6kjbh")
+
+[node name="lvl5" type="PathFollow2D" parent="LevelMap/Path2D"]
+position = Vector2(-474.30664, 124.420944)
+rotation = -1.1029581
+progress = 880.0
+
+[node name="Level 5" type="TextureButton" parent="LevelMap/Path2D/lvl5"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.22603214, 0.24190111)
+texture_normal = ExtResource("6_71ioe")
+
+[node name="final" type="PathFollow2D" parent="LevelMap/Path2D"]
+position = Vector2(-465.2553, 106.50634)
+rotation = -1.1029581
+progress = 900.0
+
+[node name="Final" type="TextureButton" parent="LevelMap/Path2D/final"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.26593298, -0.26478663)
+texture_normal = ExtResource("7_ru4ck")
+
+[node name="DinoTextBox" parent="." instance=ExtResource("9_6kjbh")]
+layout_mode = 0
+offset_top = 130.0
+offset_bottom = 130.0
+scale = Vector2(1.1262268, 0.9885769)
+
+[node name="TopBar_HUD" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 950.0
+offset_top = 125.0
+offset_right = 2978.0
+offset_bottom = 625.0
+grow_horizontal = 2
+scale = Vector2(0.16558547, 0.14587022)
+metadata/_edit_lock_ = true
+
+[node name="ScoreButton" type="TextureButton" parent="TopBar_HUD"]
+layout_mode = 2
+texture_normal = ExtResource("10_jmxhm")
+metadata/_edit_lock_ = true
+
+[node name="ModeButton" type="OptionButton" parent="TopBar_HUD"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_i2e7g")
+selected = 0
+item_count = 3
+popup/item_0/icon = ExtResource("11_i36jf")
+popup/item_0/id = 0
+popup/item_1/icon = ExtResource("12_a61ng")
+popup/item_1/id = 1
+popup/item_2/icon = ExtResource("13_swdcf")
+popup/item_2/id = 2
+metadata/_edit_lock_ = true
+
+[node name="CustomizeButton" type="TextureButton" parent="TopBar_HUD"]
+layout_mode = 2
+texture_normal = ExtResource("14_l6dl7")
+metadata/_edit_lock_ = true
+
+[node name="SettingsButton" type="TextureButton" parent="TopBar_HUD"]
+layout_mode = 2
+texture_normal = ExtResource("15_mhfbr")
+metadata/_edit_lock_ = true

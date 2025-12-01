@@ -8,9 +8,7 @@ var current_score: int = 0
 func _ready():
 	load_levels()
 	load_questions()
-	print("Levels loaded: ", levels.size())
-	print("Questions loaded: ", questions.size())
-	
+	# Uncomment pentru a rula teste automat la pornire
 	test_data_manager()
 
 # ===== LOADING FUNCTIONS =====
@@ -80,6 +78,19 @@ func get_questions_by_difficulty(difficulty: String) -> Array:
 	
 	return questions.filter(func(q): return q["level_id"] in level_ids)
 
+func get_questions_by_type(question_type: String) -> Array:
+	return questions.filter(func(q): return q.get("question_type", "multiple_choice") == question_type)
+
+func get_flashcards_for_level(level_id: int) -> Array:
+	return questions.filter(func(q): 
+		return q["level_id"] == level_id and q.get("question_type", "") == "flashcard"
+	)
+
+func get_multiple_choice_for_level(level_id: int) -> Array:
+	return questions.filter(func(q): 
+		return q["level_id"] == level_id and q.get("question_type", "multiple_choice") == "multiple_choice"
+	)
+
 # ===== ANSWER CHECKING =====
 func check_answer(question_id: int, selected_option: String) -> bool:
 	var question = get_question_by_id(question_id)
@@ -87,7 +98,23 @@ func check_answer(question_id: int, selected_option: String) -> bool:
 		push_error("Question not found: " + str(question_id))
 		return false
 	
-	return question["correct_option"] == selected_option.to_upper()
+	# For multiple choice questions
+	if question.has("correct_option"):
+		return question["correct_option"] == selected_option.to_upper()
+	
+	return false
+
+# Check if a flashcard statement is correct or false
+func check_flashcard_answer(question_id: int, is_statement_correct: bool) -> bool:
+	var question = get_question_by_id(question_id)
+	if question.is_empty():
+		push_error("Question not found: " + str(question_id))
+		return false
+	
+	# For flashcard questions, we need to know if the shown statement was correct or false
+	# The player answers if they think it's correct (true) or false (false)
+	# This function returns true if player's assessment matches reality
+	return is_statement_correct
 
 func get_correct_answer(question_id: int) -> String:
 	var question = get_question_by_id(question_id)
@@ -112,16 +139,14 @@ func calculate_points(question_id: int, attempts_used: int) -> int:
 		return 0
 	
 	var base_points = question["points"]
-	var max_attempts = question["attempts_allowed"]
+	var max_attempts = question.get("attempts_allowed", 3)
 	
-	# Reduce points based on attempts used
-	if attempts_used > max_attempts:
-		return 0
+	# If answered within allowed attempts, give full points
+	if attempts_used <= max_attempts:
+		return base_points
 	
-	var penalty_per_attempt = base_points / float(max_attempts)
-	var points_earned = base_points - (penalty_per_attempt * (attempts_used - 1))
-	
-	return int(max(points_earned, 0))
+	# If exceeded max attempts, no points
+	return 0
 
 func add_score(points: int) -> void:
 	current_score += points
@@ -159,7 +184,15 @@ func print_all_levels() -> void:
 func print_all_questions() -> void:
 	print("=== ALL QUESTIONS ===")
 	for question in questions:
-		print("ID: ", question["id"], " | Level: ", question["level_id"], " | Question: ", question["question_text"])
+		var q_type = question.get("question_type", "multiple_choice")
+		var q_text = ""
+		
+		if q_type == "flashcard":
+			q_text = question.get("correct_statement", "N/A")
+		else:
+			q_text = question.get("question_text", "N/A")
+		
+		print("ID: ", question["id"], " | Level: ", question["level_id"], " | Type: ", q_type, " | Text: ", q_text)
 
 # ===== TEST FUNCTION =====
 func test_data_manager():
@@ -212,9 +245,11 @@ func test_data_manager():
 		var points_1_attempt = calculate_points(first_q_id, 1)
 		var points_2_attempts = calculate_points(first_q_id, 2)
 		var points_3_attempts = calculate_points(first_q_id, 3)
+		var points_4_attempts = calculate_points(first_q_id, 4)
 		print("Points with 1 attempt: ", points_1_attempt)
 		print("Points with 2 attempts: ", points_2_attempts)
 		print("Points with 3 attempts: ", points_3_attempts)
+		print("Points with 4 attempts: ", points_4_attempts)
 	
 	# Test 6: Max scores
 	print("\n=== MAX SCORES ===")

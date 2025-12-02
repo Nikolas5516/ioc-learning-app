@@ -9,8 +9,12 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 2.0
+offset_right = 2.0
+offset_bottom = -73.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="TopBarBackground" type="ColorRect" parent="."]
 layout_mode = 1
@@ -20,6 +24,7 @@ anchor_bottom = 1.0
 offset_bottom = -568.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0.46855026, 0.8541935, 0.60193104, 1)
 
 [node name="BtnHome" type="TextureButton" parent="TopBarBackground"]
@@ -34,6 +39,7 @@ offset_right = -93.0
 offset_bottom = 515.0
 grow_horizontal = 0
 scale = Vector2(0.14060771, 0.14400005)
+mouse_filter = 2
 texture_normal = ExtResource("1_srwpb")
 texture_pressed = ExtResource("1_srwpb")
 texture_hover = ExtResource("1_srwpb")
@@ -50,6 +56,7 @@ offset_right = 441.0
 offset_bottom = 523.0
 grow_horizontal = 0
 scale = Vector2(0.10816407, 0.120000005)
+mouse_filter = 2
 texture_normal = ExtResource("2_qcta6")
 texture_pressed = ExtResource("2_qcta6")
 texture_hover = ExtResource("2_qcta6")
@@ -65,6 +72,7 @@ offset_right = -636.0
 offset_bottom = 517.0
 grow_horizontal = 0
 scale = Vector2(0.1305334, 0.14315498)
+mouse_filter = 2
 texture_normal = ExtResource("3_u2rhr")
 texture_pressed = ExtResource("3_u2rhr")
 texture_hover = ExtResource("3_u2rhr")

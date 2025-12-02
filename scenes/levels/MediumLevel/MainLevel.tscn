@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://nk2ko4xcjk0v"]
 
-[ext_resource type="Texture2D" uid="uid://m3dclsx5xxmh" path="res://assets/sprites/WhatsApp Image 2025-11-29 at 22.50.02.jpeg" id="1_fi62q"]
+[ext_resource type="PackedScene" uid="uid://d2fujnys4bf5t" path="res://scenes/UI/backgrounds/Bg_lvl_mediu.tscn" id="1_k2pcy"]
 [ext_resource type="Shader" uid="uid://bpdhsf1nlym06" path="res://scenes/levels/MediumLevel/MainLevel.gdshader" id="2_ri6rb"]
 [ext_resource type="Texture2D" uid="uid://cmy1lvcwx8rjw" path="res://assets/sprites/harta_baza.png" id="2_rlx2o"]
 [ext_resource type="PackedScene" uid="uid://y568rjt3p4ub" path="res://scenes/levels/MediumLevel/Judete.tscn" id="3_ri6rb"]
@@ -11,12 +11,13 @@ shader_parameter/grosime = 1.0
 
 [node name="Normal Level" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Bg_lvl_mediu" parent="." instance=ExtResource("1_k2pcy")]
+offset_left = -642.0
+offset_top = -301.0
+offset_right = 658.0
+offset_bottom = 419.0
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(-2.9999828, 0.49996376)
-scale = Vector2(1.3250773, 1.331502)
-texture = ExtResource("1_fi62q")
+[node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_fi62q")

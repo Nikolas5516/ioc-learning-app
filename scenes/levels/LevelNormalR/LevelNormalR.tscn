@@ -1,0 +1,306 @@
+[gd_scene load_steps=28 format=3 uid="uid://dh450dawqg14p"]
+
+[ext_resource type="Script" uid="uid://7y2ph7f4qclo" path="res://scenes/levels/LevelNormalR/LevelNormalR.gd" id="1_8r7tv"]
+[ext_resource type="Texture2D" uid="uid://daibdetp1ahgm" path="res://assets/sprites/harta_relief_cerculete.png" id="1_ejg6g"]
+[ext_resource type="PackedScene" uid="uid://cdjlchbiklo7d" path="res://objects/Slot.tscn" id="2_4fayb"]
+[ext_resource type="Texture2D" uid="uid://8u36mc5y0tp5" path="res://assets/sprites/lvl_mediu.png" id="2_axuc8"]
+[ext_resource type="PackedScene" uid="uid://drisgnri3qwyj" path="res://objects/Piece.tscn" id="3_8r7tv"]
+[ext_resource type="Texture2D" uid="uid://cxxd5mwfx2skx" path="res://assets/sprites/subcarpatii.png" id="6_7lp4a"]
+[ext_resource type="Texture2D" uid="uid://cnorbcy2xpf1" path="res://assets/sprites/dealurile_de_vest.png" id="7_lyipp"]
+[ext_resource type="Texture2D" uid="uid://bxdme17k62v6j" path="res://assets/sprites/carpatii_occidentali.png" id="8_hbo8i"]
+[ext_resource type="Texture2D" uid="uid://ce23np8tqosac" path="res://assets/sprites/depresiunea_coliniara_a_transilvaniei.png" id="9_f83hg"]
+[ext_resource type="Texture2D" uid="uid://e1jac8s4v6fa" path="res://assets/sprites/carpatii_meridionali.png" id="10_yiibl"]
+[ext_resource type="Texture2D" uid="uid://d2x7bn80kplsw" path="res://assets/sprites/carpatii_orientali.png" id="11_t8vf3"]
+[ext_resource type="Texture2D" uid="uid://deg70f4pfgjhq" path="res://assets/sprites/podisul_mehedinti.png" id="12_t8vf3"]
+[ext_resource type="Texture2D" uid="uid://bo4dm0j72mbr" path="res://assets/sprites/podisul_getic.png" id="13_7fhqj"]
+[ext_resource type="Texture2D" uid="uid://cp0vsdi2wvko5" path="res://assets/sprites/campia_romana.png" id="14_meseh"]
+[ext_resource type="Texture2D" uid="uid://ccvxnf01gtrbp" path="res://assets/sprites/podisul_moldovei.png" id="15_0khnx"]
+[ext_resource type="Texture2D" uid="uid://cwsta2gdphipy" path="res://assets/sprites/podisul_dobrogei.png" id="16_eotyu"]
+[ext_resource type="Texture2D" uid="uid://c8v3agm8u81ob" path="res://assets/sprites/delta_dunarii.png" id="17_wwken"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7fhqj"]
+size = Vector2(302, 189)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_meseh"]
+size = Vector2(300.5, 311)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0khnx"]
+size = Vector2(294, 219.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eotyu"]
+size = Vector2(298.5, 212.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wwken"]
+size = Vector2(301.5, 212)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rj1bf"]
+size = Vector2(296.11115, 203.88889)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kvjjg"]
+size = Vector2(297.83337, 223.77779)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_deptc"]
+size = Vector2(297.83334, 220.00003)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w70kt"]
+size = Vector2(328.33337, 211.66669)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kt388"]
+size = Vector2(297.77777, 155.11111)
+
+[node name="LevelNormalR" type="Node2D"]
+script = ExtResource("1_8r7tv")
+
+[node name="LvlMediu" type="Sprite2D" parent="."]
+position = Vector2(639.5, 362)
+scale = Vector2(0.83268225, 0.70703125)
+texture = ExtResource("2_axuc8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(643, 363)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_ejg6g")
+
+[node name="SlotsContainer" type="Node2D" parent="."]
+
+[node name="Slot1" parent="SlotsContainer" instance=ExtResource("2_4fayb")]
+position = Vector2(800, 457)
+scale = Vector2(0.45, 0.45)
+
+[node name="Slot2" parent="SlotsContainer" instance=ExtResource("2_4fayb")]
+position = Vector2(342, 309)
+scale = Vector2(0.5, 0.5)
+correct_id = "campia_de_vest"
+
+[node name="Slot3" parent="SlotsContainer" instance=ExtResource("2_4fayb")]
+position = Vector2(426, 227)
+scale = Vector2(0.5, 0.5)
+correct_id = "dealurile_de_vest"
+
+[node name="Slot4" parent="SlotsContainer" instance=ExtResource("2_4fayb")]
+position = Vector2(499, 317)
+scale = Vector2(0.5, 0.5)
+correct_id = "carpatii_occidentali"
+
+[node name="Slot5" parent="SlotsContainer" instance=ExtResource("2_4fayb")]
+position = Vector2(617, 273)
+scale = Vector2(0.5, 0.5)
+correct_id = "depresiune_transilvania"
+
+[node name="Slot6" parent="SlotsContainer" instance=ExtResource("2_4fayb")]
+position = Vector2(592, 418)
+scale = Vector2(0.5, 0.5)
+correct_id = "carpatii_meridionali"
+
+[node name="Slot7" parent="SlotsContainer" instance=ExtResource("2_4fayb")]
+position = Vector2(767, 241)
+scale = Vector2(0.5, 0.5)
+correct_id = "carpatii_orientali"
+
+[node name="Slot8" parent="SlotsContainer" instance=ExtResource("2_4fayb")]
+position = Vector2(464, 505)
+scale = Vector2(0.5, 0.5)
+correct_id = "podisul_mehedinti"
+
+[node name="Slot9" parent="SlotsContainer" instance=ExtResource("2_4fayb")]
+position = Vector2(576, 532)
+scale = Vector2(0.5, 0.5)
+correct_id = "podisul_getic"
+
+[node name="Slot10" parent="SlotsContainer" instance=ExtResource("2_4fayb")]
+position = Vector2(744, 593)
+scale = Vector2(0.5, 0.5)
+correct_id = "campia_romana"
+
+[node name="Slot11" parent="SlotsContainer" instance=ExtResource("2_4fayb")]
+position = Vector2(894, 213)
+scale = Vector2(0.5, 0.5)
+correct_id = "podisul_moldovei"
+
+[node name="Slot12" parent="SlotsContainer" instance=ExtResource("2_4fayb")]
+position = Vector2(1009, 532)
+scale = Vector2(0.5, 0.5)
+correct_id = "podisul_dobrogei"
+
+[node name="Slot13" parent="SlotsContainer" instance=ExtResource("2_4fayb")]
+position = Vector2(1096, 429)
+scale = Vector2(0.5, 0.5)
+correct_id = "delta_dunarii"
+
+[node name="PiecesContainer" type="Node2D" parent="."]
+
+[node name="Piece1" parent="PiecesContainer" instance=ExtResource("3_8r7tv")]
+position = Vector2(92, 184)
+scale = Vector2(0.45, 0.45)
+piece_id = "subcarpatii"
+
+[node name="Sprite2D" parent="PiecesContainer/Piece1" index="0"]
+position = Vector2(-2, -80)
+texture = ExtResource("6_7lp4a")
+
+[node name="CollisionShape2D" parent="PiecesContainer/Piece1" index="1"]
+position = Vector2(-1, -66.5)
+shape = SubResource("RectangleShape2D_7fhqj")
+
+[node name="Piece2" parent="PiecesContainer" instance=ExtResource("3_8r7tv")]
+position = Vector2(1126, 186)
+scale = Vector2(0.45, 0.45)
+piece_id = "campia_de_vest"
+
+[node name="CollisionShape2D" parent="PiecesContainer/Piece2" index="1"]
+position = Vector2(-79, -79)
+
+[node name="Piece3" parent="PiecesContainer" instance=ExtResource("3_8r7tv")]
+position = Vector2(892, 711)
+scale = Vector2(0.45, 0.45)
+piece_id = "dealurile_de_vest"
+
+[node name="Sprite2D" parent="PiecesContainer/Piece3" index="0"]
+position = Vector2(-44, -92)
+texture = ExtResource("7_lyipp")
+
+[node name="CollisionShape2D" parent="PiecesContainer/Piece3" index="1"]
+position = Vector2(-44, -86)
+
+[node name="Piece4" parent="PiecesContainer" instance=ExtResource("3_8r7tv")]
+position = Vector2(441, 622)
+scale = Vector2(0.45, 0.45)
+piece_id = "carpatii_occidentali"
+
+[node name="Sprite2D" parent="PiecesContainer/Piece4" index="0"]
+position = Vector2(-98, 92)
+texture = ExtResource("8_hbo8i")
+
+[node name="CollisionShape2D" parent="PiecesContainer/Piece4" index="1"]
+position = Vector2(-98, 80)
+
+[node name="Piece5" parent="PiecesContainer" instance=ExtResource("3_8r7tv")]
+position = Vector2(78, 611)
+scale = Vector2(0.45, 0.45)
+piece_id = "depresiune_transilvania"
+
+[node name="Sprite2D" parent="PiecesContainer/Piece5" index="0"]
+position = Vector2(0, -138)
+texture = ExtResource("9_f83hg")
+
+[node name="CollisionShape2D" parent="PiecesContainer/Piece5" index="1"]
+position = Vector2(-0.25, -121.5)
+shape = SubResource("RectangleShape2D_meseh")
+
+[node name="Piece6" parent="PiecesContainer" instance=ExtResource("3_8r7tv")]
+position = Vector2(245, 278)
+scale = Vector2(0.45, 0.45)
+piece_id = "carpatii_meridionali"
+
+[node name="Sprite2D" parent="PiecesContainer/Piece6" index="0"]
+position = Vector2(20, -94)
+texture = ExtResource("10_yiibl")
+
+[node name="CollisionShape2D" parent="PiecesContainer/Piece6" index="1"]
+position = Vector2(21, -79.75)
+shape = SubResource("RectangleShape2D_0khnx")
+
+[node name="Piece7" parent="PiecesContainer" instance=ExtResource("3_8r7tv")]
+position = Vector2(1222, 401)
+scale = Vector2(0.45, 0.45)
+piece_id = "carpatii_orientali"
+
+[node name="Sprite2D" parent="PiecesContainer/Piece7" index="0"]
+position = Vector2(-24, -94)
+texture = ExtResource("11_t8vf3")
+
+[node name="CollisionShape2D" parent="PiecesContainer/Piece7" index="1"]
+position = Vector2(-25.25, -84.25)
+shape = SubResource("RectangleShape2D_eotyu")
+
+[node name="Piece8" parent="PiecesContainer" instance=ExtResource("3_8r7tv")]
+position = Vector2(167, 356)
+scale = Vector2(0.45, 0.45)
+piece_id = "podisul_mehedinti"
+
+[node name="Sprite2D" parent="PiecesContainer/Piece8" index="0"]
+position = Vector2(-116, 88)
+texture = ExtResource("12_t8vf3")
+
+[node name="CollisionShape2D" parent="PiecesContainer/Piece8" index="1"]
+position = Vector2(-116.75, 74)
+shape = SubResource("RectangleShape2D_wwken")
+
+[node name="Piece9" parent="PiecesContainer" instance=ExtResource("3_8r7tv")]
+position = Vector2(1148, 619)
+scale = Vector2(0.45, 0.45)
+piece_id = "podisul_getic"
+
+[node name="Sprite2D" parent="PiecesContainer/Piece9" index="0"]
+position = Vector2(17.777794, 87.999985)
+texture = ExtResource("13_7fhqj")
+
+[node name="CollisionShape2D" parent="PiecesContainer/Piece9" index="1"]
+position = Vector2(18.611107, 75.27778)
+shape = SubResource("RectangleShape2D_rj1bf")
+
+[node name="Piece10" parent="PiecesContainer" instance=ExtResource("3_8r7tv")]
+position = Vector2(966, 88)
+scale = Vector2(0.45, 0.45)
+piece_id = "campia_romana"
+
+[node name="Sprite2D" parent="PiecesContainer/Piece10" index="0"]
+position = Vector2(113.333374, -89.77774)
+texture = ExtResource("14_meseh")
+
+[node name="CollisionShape2D" parent="PiecesContainer/Piece10" index="1"]
+position = Vector2(111.111115, -73.333336)
+shape = SubResource("RectangleShape2D_kvjjg")
+
+[node name="Piece11" parent="PiecesContainer" instance=ExtResource("3_8r7tv")]
+position = Vector2(567, -13)
+scale = Vector2(0.45, 0.45)
+piece_id = "podisul_moldovei"
+
+[node name="Sprite2D" parent="PiecesContainer/Piece11" index="0"]
+position = Vector2(73.33333, 88.888855)
+texture = ExtResource("15_0khnx")
+
+[node name="CollisionShape2D" parent="PiecesContainer/Piece11" index="1"]
+position = Vector2(75.583336, 74.44446)
+shape = SubResource("RectangleShape2D_deptc")
+
+[node name="Piece12" parent="PiecesContainer" instance=ExtResource("3_8r7tv")]
+position = Vector2(399, 84)
+scale = Vector2(0.45, 0.45)
+piece_id = "podisul_dobrogei"
+
+[node name="Sprite2D" parent="PiecesContainer/Piece12" index="0"]
+position = Vector2(-146.66669, -89.77777)
+texture = ExtResource("16_eotyu")
+
+[node name="CollisionShape2D" parent="PiecesContainer/Piece12" index="1"]
+position = Vector2(-130.83336, -74.72224)
+shape = SubResource("RectangleShape2D_w70kt")
+
+[node name="Piece13" parent="PiecesContainer" instance=ExtResource("3_8r7tv")]
+position = Vector2(733, 704)
+scale = Vector2(0.45, 0.45)
+piece_id = "delta_dunarii"
+
+[node name="Sprite2D" parent="PiecesContainer/Piece13" index="0"]
+position = Vector2(-71.111115, -60.888855)
+texture = ExtResource("17_wwken")
+
+[node name="CollisionShape2D" parent="PiecesContainer/Piece13" index="1"]
+position = Vector2(-71.11112, -46.444447)
+shape = SubResource("RectangleShape2D_kt388")
+
+[editable path="PiecesContainer/Piece1"]
+[editable path="PiecesContainer/Piece2"]
+[editable path="PiecesContainer/Piece3"]
+[editable path="PiecesContainer/Piece4"]
+[editable path="PiecesContainer/Piece5"]
+[editable path="PiecesContainer/Piece6"]
+[editable path="PiecesContainer/Piece7"]
+[editable path="PiecesContainer/Piece8"]
+[editable path="PiecesContainer/Piece9"]
+[editable path="PiecesContainer/Piece10"]
+[editable path="PiecesContainer/Piece11"]
+[editable path="PiecesContainer/Piece12"]
+[editable path="PiecesContainer/Piece13"]

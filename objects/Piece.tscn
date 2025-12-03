@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://drisgnri3qwyj"]
+
+[ext_resource type="Script" uid="uid://dspc328ob1q60" path="res://objects/Piece.gd" id="1_bg64q"]
+[ext_resource type="Texture2D" uid="uid://dasq361lmbo3q" path="res://assets/sprites/campia_de_vest.png" id="2_bg64q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ronn1"]
+size = Vector2(298, 202)
+
+[node name="Piece" type="Area2D"]
+script = ExtResource("1_bg64q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-80, -92)
+texture = ExtResource("2_bg64q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-79, -78)
+shape = SubResource("RectangleShape2D_ronn1")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

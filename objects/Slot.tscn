@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdjlchbiklo7d"]
+
+[ext_resource type="Script" uid="uid://ddos7mm2dikp5" path="res://objects/Slot.gd" id="1_prsyb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uq3y7"]
+radius = 20.22375
+
+[node name="Slot" type="Area2D"]
+script = ExtResource("1_prsyb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_uq3y7")

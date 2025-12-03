@@ -1,7 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1nan8gno2brf"]
+[gd_scene load_steps=4 format=3 uid="uid://d1nan8gno2brf"]
 
 [ext_resource type="Texture2D" uid="uid://cerugd04lp7ln" path="res://assets/sprites/lvl_usor.png" id="1_drj2f"]
 [ext_resource type="PackedScene" uid="uid://bv7qrbffhrink" path="res://scenes/UI/components/TopBar.tscn" id="2_6hj5s"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6hj5s"]
+bg_color = Color(0, 0, 0, 0.7411765)
+corner_radius_top_left = 70
+corner_radius_top_right = 70
+corner_radius_bottom_right = 70
+corner_radius_bottom_left = 70
 
 [node name="Bg_Lvl_usor" type="Control"]
 layout_mode = 3
@@ -23,3 +30,18 @@ expand_mode = 5
 
 [node name="TopBar" parent="." instance=ExtResource("2_6hj5s")]
 layout_mode = 1
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -543.0
+offset_top = -215.5
+offset_right = 551.0
+offset_bottom = 321.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6hj5s")

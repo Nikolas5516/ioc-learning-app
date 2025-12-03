@@ -78,4 +78,5 @@ texture_normal = ExtResource("3_u2rhr")
 texture_pressed = ExtResource("3_u2rhr")
 texture_hover = ExtResource("3_u2rhr")
 
+[connection signal="pressed" from="Panel/BtnHome" to="." method="_on_btn_home_pressed"]
 [connection signal="pressed" from="Panel/BtnSettings" to="." method="_on_btn_settings_pressed"]

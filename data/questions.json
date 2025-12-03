@@ -12,124 +12,167 @@
 	"attempts_allowed": 3,
 	"points": 10
   },
+  [
   {
 	"id": 7,
 	"level_id": 7,
 	"question_type": "flashcard",
-	"correct_statement": "Relieful României este alcătuit din munți, dealuri, podișuri și câmpii.",
-	"false_statement": "Relieful României este alcătuit doar din câmpii întinse.",
+	"correct_statement": "Fluviul Dunărea izvorăște din Munții Pădurea Neagră și se varsă în Marea Neagră.",
+	"false_statement": "Dunărea este un râu care izvorăște din Munții Carpați și se varsă în Marea Neagră.",
 	"points": 10
   },
   {
 	"id": 8,
 	"level_id": 7,
 	"question_type": "flashcard",
-	"correct_statement": "Munții reprezintă cea mai înaltă treaptă de relief din România.",
-	"false_statement": "Câmpiile reprezintă cea mai înaltă treaptă de relief din România.",
+	"correct_statement": "Apele stătătoare (lacurile) și cele curgătoare (râurile) sunt forme de apă.",
+	"false_statement": "Singura formă de apă pe uscat este reprezentată de oceane.",
 	"points": 10
   },
   {
 	"id": 9,
 	"level_id": 7,
 	"question_type": "flashcard",
-	"correct_statement": "Câmpiile sunt cea mai joasă treaptă de relief din România.",
-	"false_statement": "Munții sunt cea mai joasă treaptă de relief din România.",
+	"correct_statement": "România are ieșire la Marea Neagră.",
+	"false_statement": "România are ieșire la Marea Mediterană.",
 	"points": 10
   },
   {
 	"id": 10,
 	"level_id": 7,
 	"question_type": "flashcard",
-	"correct_statement": "Munții Carpați se află în partea centrală a României.",
-	"false_statement": "Munții Carpați se află exclusiv în partea de est a României.",
+	"correct_statement": "Lacurile se formează în adânciturile scoarței terestre, adunate în urma ploilor sau topirii zăpezilor.",
+	"false_statement": "Lacurile sunt întotdeauna sărate.",
 	"points": 10
   },
   {
 	"id": 11,
 	"level_id": 7,
 	"question_type": "flashcard",
-	"correct_statement": "Cele trei trepte de relief ale României ocupă suprafețe aproximativ egale.",
-	"false_statement": "Câmpiile acoperă aproape întreaga suprafață a României.",
-	"points": 15
+	"correct_statement": "Circuitul apei în natură include evaporarea, condensarea și precipitațiile.",
+	"false_statement": "Apa de ploaie se pierde complet după ce ajunge pe sol.",
+	"points": 10
   },
   {
 	"id": 12,
 	"level_id": 7,
 	"question_type": "flashcard",
-	"correct_statement": "Munții Carpați formează un inel în jurul depresiunii din interiorul țării.",
-	"false_statement": "Munții Carpați formează o câmpie continuă în centrul țării.",
-	"points": 15
+	"correct_statement": "Delta Dunării este cea mai joasă unitate de relief din România.",
+	"false_statement": "Delta Dunării este o zonă muntoasă.",
+	"points": 10
   },
   {
 	"id": 13,
 	"level_id": 7,
 	"question_type": "flashcard",
-	"correct_statement": "Dealurile și podișurile înconjoară exteriorul Munților Carpați.",
-	"false_statement": "Câmpiile înconjoară direct Munții Carpați, fără zone de dealuri sau podișuri.",
-	"points": 15
+	"correct_statement": "Lacurile glaciare sunt formate în circuri sau văi glaciare, cum ar fi Lacul Bâlea.",
+	"false_statement": "Lacurile de acumulare create de om (barajele) sunt considerate lacuri vulcanice.",
+	"points": 10
   },
   {
 	"id": 14,
 	"level_id": 7,
 	"question_type": "flashcard",
-	"correct_statement": "Podișul Moldovei este cel mai întins podiș al României.",
-	"false_statement": "Podișul Mehedinți este cel mai întins podiș al României.",
-	"points": 15
+	"correct_statement": "Apele subterane sunt o sursă de apă potabilă.",
+	"false_statement": "Apele subterane nu au nicio legătură cu râurile sau lacurile de la suprafață.",
+	"points": 10
   },
   {
 	"id": 15,
-	"level_id": 8,
+	"level_id": 7,
 	"question_type": "flashcard",
-	"correct_statement": "Subcarpații sunt un rând de dealuri situate între munți și câmpii.",
-	"false_statement": "Subcarpații sunt o câmpie situată în interiorul arcului carpatic.",
+	"correct_statement": "Un afluent este un râu care se varsă într-un râu mai mare sau într-un fluviu.",
+	"false_statement": "Un râu include doar zona sa de vărsare.",
 	"points": 10
   },
   {
 	"id": 16,
-	"level_id": 8,
+	"level_id": 7,
 	"question_type": "flashcard",
-	"correct_statement": "Câmpiile se întind în exteriorul zonei de dealuri și podișuri.",
-	"false_statement": "Câmpiile se află în centrul țării, fiind înconjurate de munți.",
+	"correct_statement": "Marea Neagră este o mare interioară, un bazin secundar legat de ocean.",
+	"false_statement": "Marea Neagră este cel mai mare lac de pe Pământ.",
 	"points": 10
   },
   {
 	"id": 17,
-	"level_id": 8,
+	"level_id": 7,
 	"question_type": "flashcard",
-	"correct_statement": "Carpații Românești sunt formați din trei ramuri: Orientali, Meridionali și Occidentali.",
-	"false_statement": "Carpații Românești sunt formați din două ramuri: Carpații Nordici și Carpații Sudici.",
-	"points": 15
+	"correct_statement": "Lacurile de coastă, precum Razim, se formează prin bararea unor golfuri de către cordoane de nisip.",
+	"false_statement": "Lacul glaciar Bucura este un lac de baraj natural.",
+	"points": 10
   },
   {
 	"id": 18,
-	"level_id": 8,
+	"level_id": 7,
 	"question_type": "flashcard",
-	"correct_statement": "Depresiunea Colinară a Transilvaniei se află în interiorul arcului carpatic.",
-	"false_statement": "Depresiunea Colinară a Transilvaniei se află în exteriorul arcului carpatic.",
-	"points": 15
+	"correct_statement": "Principalele brațe prin care Dunărea se varsă în Marea Neagră sunt Chilia, Sulina și Sfântu Gheorghe.",
+	"false_statement": "Brațul cel mai navigabil și mai adânc al Dunării în Deltă este Brațul Chilia.",
+	"points": 10
   },
   {
 	"id": 19,
-	"level_id": 8,
+	"level_id": 7,
 	"question_type": "flashcard",
-	"correct_statement": "Subcarpații pot depăși uneori 1 000 m în înălțime, deși sunt considerați dealuri.",
-	"false_statement": "Subcarpații nu depășesc niciodată 100 m în înălțime.",
-	"points": 15
+	"correct_statement": "Locul nașterii este un criteriu de bază pentru a ști cărei populații aparține o persoană.",
+	"false_statement": "Doar culoarea ochilor ne spune de unde provine o persoană.",
+	"points": 10
   },
   {
 	"id": 20,
-	"level_id": 8,
+	"level_id": 7,
 	"question_type": "flashcard",
-	"correct_statement": "Podișul Dobrogei cuprinde atât dealuri vechi, cât și podișuri foarte joase.",
-	"false_statement": "Podișul Dobrogei este alcătuit exclusiv din munți înalți de peste 2 000 m.",
-	"points": 15
+	"correct_statement": "Satele sunt așezări rurale, iar orașele sunt așezări urbane, acestea din urmă fiind mai mari și mai dezvoltate.",
+	"false_statement": "În orașe, majoritatea oamenilor se ocupă cu agricultura.",
+	"points": 10
   },
   {
 	"id": 21,
-	"level_id": 8,
+	"level_id": 7,
 	"question_type": "flashcard",
-	"correct_statement": "Dealurile de Vest fac trecerea între Carpații Occidentali și Câmpia de Vest.",
-	"false_statement": "Dealurile de Vest se află între Carpații Meridionali și Marea Neagră.",
+	"correct_statement": "Numărul de locuitori al unei așezări se stabilește prin recensământ.",
+	"false_statement": "Numărul populației unei țări rămâne mereu neschimbat.",
 	"points": 10
+  },
+  {
+	"id": 22,
+	"level_id": 7,
+	"question_type": "flashcard",
+	"correct_statement": "În România trăiesc, pe lângă români, și minorități naționale.",
+	"false_statement": "Toți locuitorii vorbesc aceeași limbă.",
+	"points": 15
+  },
+  {
+	"id": 23,
+	"level_id": 7,
+	"question_type": "flashcard",
+	"correct_statement": "Populația este distribuită neuniform, fiind mai densă în zonele de câmpie și mai rară în zonele montane înalte.",
+	"false_statement": "În zonele foarte reci trăiește o populație foarte numeroasă și densă.",
+	"points": 15
+  },
+  {
+	"id": 24,
+	"level_id": 7,
+	"question_type": "flashcard",
+	"correct_statement": "Satele au, în general, o funcție predominant agricolă, legată de cultivarea pământului și creșterea animalelor.",
+	"false_statement": "Satele nu au nicio legătură cu activitățile agricole.",
+	"points": 15
+  },
+  {
+	"id": 25,
+	"level_id": 7,
+	"question_type": "flashcard",
+	"correct_statement": "Populația în vârstă este dependentă de populația tânără.",
+	"false_statement": "O țară cu mulți tineri se confruntă cu o îmbătrânire rapidă a populației.",
+	"points": 15
+  },
+  {
+	"id": 26,
+	"level_id": 7,
+	"question_type": "flashcard",
+	"correct_statement": "București este orașul cu cea mai mare populație din România",
+	"false_statement": "Clujul este orașul cu cea mai mare populație din România",
+	"points": 15
   }
+]
+
 ]

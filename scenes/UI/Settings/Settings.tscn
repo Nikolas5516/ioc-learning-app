@@ -1,0 +1,170 @@
+[gd_scene load_steps=10 format=3 uid="uid://dp1lgdvsg2a43"]
+
+[ext_resource type="Script" uid="uid://ch1of2m2fe1y7" path="res://scenes/UI/Settings/Settings.gd" id="1_5dgb1"]
+[ext_resource type="PackedScene" uid="uid://bqrhk34qyvlvb" path="res://scenes/UI/backgrounds/Bg_hub.tscn" id="2_fawbi"]
+[ext_resource type="Texture2D" uid="uid://bah24whbd6515" path="res://assets/sprites/close_icon.png" id="3_ghuma"]
+[ext_resource type="Script" uid="uid://d0vd0a2xv2nle" path="res://scenes/UI/Settings/h_slider.gd" id="4_fawbi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ks2vq"]
+bg_color = Color(0, 0, 0, 0.41960785)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fawbi"]
+bg_color = Color(0.50980395, 0.9019608, 0.9490196, 0.85490197)
+corner_radius_top_left = 100
+corner_radius_top_right = 100
+corner_radius_bottom_right = 100
+corner_radius_bottom_left = 100
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ghuma"]
+bg_color = Color(0.7792914, 0.7792914, 0.7792912, 1)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q4o7v"]
+bg_color = Color(0.3137255, 0.6509804, 0.7764706, 0.7764706)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1hw8f"]
+bg_color = Color(0.20259938, 0.6516006, 0.83426064, 0.6666667)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5dgb1")
+
+[node name="Bg_hub" parent="." instance=ExtResource("2_fawbi")]
+layout_mode = 1
+offset_left = -1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = 1.0
+
+[node name="FundalButonX" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 1176.0
+offset_top = 1.0
+offset_right = 1279.0
+offset_bottom = 95.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ks2vq")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -100.0
+offset_bottom = 100.0
+grow_horizontal = 0
+texture_normal = ExtResource("3_ghuma")
+texture_pressed = ExtResource("3_ghuma")
+texture_hover = ExtResource("3_ghuma")
+
+[node name="FundalSlider1" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -393.0
+offset_top = -188.5
+offset_right = 393.0
+offset_bottom = 188.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fawbi")
+
+[node name="FundalSlider2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 323.0
+offset_top = 402.0
+offset_right = 963.0
+offset_bottom = 442.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ghuma")
+
+[node name="HSlider" type="HSlider" parent="."]
+layout_mode = 0
+offset_left = 323.0
+offset_top = -71.0
+offset_right = 962.0
+offset_bottom = 911.0
+max_value = 1.0
+step = 0.001
+script = ExtResource("4_fawbi")
+bus_name = "Voice"
+
+[node name="FundalText" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 467.0
+offset_top = 176.0
+offset_right = 839.0
+offset_bottom = 277.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q4o7v")
+
+[node name="Text" type="Label" parent="FundalText"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -98.0
+offset_top = -39.5
+offset_right = 101.0
+offset_bottom = 36.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 55
+text = "VOLUM"
+
+[node name="Panel" type="Panel" parent="FundalText"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -122.0
+offset_top = 62.5
+offset_right = 138.0
+offset_bottom = 155.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_1hw8f")
+
+[node name="Procent" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.0
+offset_top = -73.5
+offset_right = 51.0
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 70
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="value_changed" from="HSlider" to="HSlider" method="_on_value_changed"]

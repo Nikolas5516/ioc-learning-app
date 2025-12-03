@@ -1,70 +1,81 @@
-[gd_scene load_steps=4 format=3 uid="uid://bv7qrbffhrink"]
+[gd_scene load_steps=6 format=3 uid="uid://bv7qrbffhrink"]
 
-[ext_resource type="Texture2D" uid="uid://bi1b24garkrci" path="res://assets/sprites/home.png" id="1_srwpb"]
-[ext_resource type="Texture2D" uid="uid://cnicvnxube2s0" path="res://assets/sprites/settings.png" id="2_qcta6"]
-[ext_resource type="Texture2D" uid="uid://dc0ys1occc8k6" path="res://assets/sprites/shopping.png" id="3_u2rhr"]
+[ext_resource type="Script" uid="uid://deq6a81j34lrr" path="res://scenes/UI/components/Top_bar.gd" id="1_qcta6"]
+[ext_resource type="Texture2D" uid="uid://bw8kwlhhhnjrf" path="res://assets/sprites/home_.png" id="1_srwpb"]
+[ext_resource type="Texture2D" uid="uid://dvykr522nj7ih" path="res://assets/sprites/Gemini_Generated_Image_my27zvmy27zvmy27-removebg-preview.png" id="2_qcta6"]
+[ext_resource type="Texture2D" uid="uid://dfcq3f2e4u2pd" path="res://assets/sprites/Gemini_Generated_Image_kj6l0ikj6l0ikj6l-removebg-preview.png" id="3_u2rhr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hn1yj"]
+bg_color = Color(0.42352942, 0.6666667, 0.5058824, 0.69411767)
+corner_radius_top_left = 50
+corner_radius_top_right = 50
+corner_radius_bottom_right = 50
+corner_radius_bottom_left = 50
 
 [node name="TopBar" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 2.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_qcta6")
 
-[node name="TopBarBackground" type="ColorRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_bottom = -568.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.46855026, 0.8541935, 0.60193104, 1)
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 90.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hn1yj")
 
-[node name="BtnHome" type="TextureButton" parent="TopBarBackground"]
+[node name="BtnHome" type="TextureButton" parent="Panel"]
 custom_minimum_size = Vector2(20, 20)
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -605.0
-offset_top = 3.0
-offset_right = -93.0
-offset_bottom = 515.0
+offset_left = -690.0
+offset_top = -7.000001
+offset_right = 334.0
+offset_bottom = 1017.0
 grow_horizontal = 0
-scale = Vector2(0.14060771, 0.14400005)
+scale = Vector2(0.100612596, 0.104000434)
 texture_normal = ExtResource("1_srwpb")
 texture_pressed = ExtResource("1_srwpb")
 texture_hover = ExtResource("1_srwpb")
 stretch_mode = 0
 
-[node name="BtnSettings" type="TextureButton" parent="TopBarBackground"]
+[node name="BtnSettings" type="TextureButton" parent="Panel"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -71.0
-offset_top = 11.0
-offset_right = 441.0
-offset_bottom = 523.0
+offset_left = -96.0
+offset_top = -7.0
+offset_right = 404.0
+offset_bottom = 493.0
 grow_horizontal = 0
-scale = Vector2(0.10816407, 0.120000005)
+scale = Vector2(0.18816407, 0.19999985)
 texture_normal = ExtResource("2_qcta6")
 texture_pressed = ExtResource("2_qcta6")
 texture_hover = ExtResource("2_qcta6")
 
-[node name="BtnShop" type="TextureButton" parent="TopBarBackground"]
+[node name="BtnShop" type="TextureButton" parent="Panel"]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -1148.0
-offset_top = 5.0
-offset_right = -636.0
-offset_bottom = 517.0
+offset_left = -1280.0
+offset_top = -10.0
+offset_right = -768.0
+offset_bottom = 490.0
 grow_horizontal = 0
-scale = Vector2(0.1305334, 0.14315498)
+scale = Vector2(0.20070703, 0.21859337)
 texture_normal = ExtResource("3_u2rhr")
 texture_pressed = ExtResource("3_u2rhr")
 texture_hover = ExtResource("3_u2rhr")
+
+[connection signal="pressed" from="Panel/BtnSettings" to="." method="_on_btn_settings_pressed"]

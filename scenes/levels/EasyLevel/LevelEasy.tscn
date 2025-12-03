@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://dyv8kinim5k01"]
+[gd_scene load_steps=13 format=3 uid="uid://dyv8kinim5k01"]
 
+[ext_resource type="PackedScene" uid="uid://d1nan8gno2brf" path="res://scenes/UI/backgrounds/Bg_lvl_usor.tscn" id="1_snwl5"]
 [ext_resource type="PackedScene" uid="uid://h7xcghta0b3q" path="res://objects/RegiuneBase.tscn" id="1_xtd4k"]
 [ext_resource type="Texture2D" uid="uid://cpk3e0hknqacw" path="res://assets/sprites/bucovina.png" id="2_4urcp"]
 [ext_resource type="Texture2D" uid="uid://c035hp4u1jh7v" path="res://assets/sprites/moldova.png" id="4_cbooi"]
@@ -13,6 +14,12 @@
 [ext_resource type="Texture2D" uid="uid://beoge6bx8yb1m" path="res://assets/sprites/munte mare.png" id="12_bh6dk"]
 
 [node name="LevelEasy" type="Node2D"]
+
+[node name="Bg_Lvl_usor" parent="." instance=ExtResource("1_snwl5")]
+offset_left = -658.0
+offset_top = -354.0
+offset_right = 642.0
+offset_bottom = 366.0
 
 [node name="Bucovina" parent="." instance=ExtResource("1_xtd4k")]
 z_index = 1

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://nk2ko4xcjk0v"]
+[gd_scene load_steps=6 format=3 uid="uid://b0v2pbt70erdt"]
 
 [ext_resource type="Texture2D" uid="uid://m3dclsx5xxmh" path="res://WhatsApp Image 2025-11-29 at 22.50.02.jpeg" id="1_fi62q"]
 [ext_resource type="Shader" uid="uid://bpdhsf1nlym06" path="res://MainLevel.gdshader" id="2_ri6rb"]

@@ -270,3 +270,47 @@ func test_data_manager():
 	print("After reset: ", get_score())
 	
 	print("\n=== ALL TESTS COMPLETE ===\n")
+	
+
+# ===== LOGICA PENTRU CORECȚIA LUI DINO (HARD LEVEL V2) =====
+
+# Această funcție returnează un dicționar cu:
+# - 'false_text': Minciuna lui Dino
+# - 'correct_text': Adevărul (Răspunsul corect)
+# - 'options': O listă cu 3 variante (1 corectă + 2 distractori din alte întrebări)
+# - 'points': Punctajul
+func get_dino_correction_challenge(level_id: int) -> Dictionary:
+	# 1. Luăm toate flashcard-urile pentru nivelul cerut (ex: 7 sau 8)
+	var all_flashcards = get_flashcards_for_level(level_id)
+	
+	if all_flashcards.size() < 3:
+		push_error("Nu sunt suficiente întrebări pentru a genera opțiuni!")
+		return {}
+
+	# 2. Alegem o întrebare random care va fi "Misiunea Curentă"
+	var target_question = all_flashcards.pick_random()
+	
+	# 3. Pregătim lista de opțiuni (începem cu răspunsul corect)
+	var options = []
+	options.append(target_question["correct_statement"])
+	
+	# 4. Adăugăm 2 variante "distractoare"
+	# Luăm 'correct_statement' de la ALTE întrebări ca să pară credibile
+	var attempts = 0
+	while options.size() < 3 and attempts < 100:
+		var random_q = all_flashcards.pick_random()
+		# Ne asigurăm că nu e aceeași întrebare și nu am pus deja opțiunea
+		if random_q["id"] != target_question["id"] and not options.has(random_q["correct_statement"]):
+			options.append(random_q["correct_statement"])
+		attempts += 1
+	
+	# 5. Amestecăm opțiunile ca răspunsul corect să nu fie mereu primul
+	options.shuffle()
+	
+	return {
+		"id": target_question["id"],
+		"false_text": target_question["false_statement"],
+		"correct_text": target_question["correct_statement"],
+		"options": options,
+		"points": target_question["points"]
+	}

@@ -1,0 +1,80 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcps2njo6rn18"]
+
+[ext_resource type="Texture2D" uid="uid://b1cje48fkpqin" path="res://assets/sprites/lvl_greu.png" id="1_grui2"]
+[ext_resource type="Script" uid="uid://bommsxt1boadd" path="res://scenes/levels/HardLevelV2/hard_levelv_2.gd" id="1_ms8ou"]
+[ext_resource type="Texture2D" uid="uid://cxhs8gaakf0b6" path="res://assets/sprites/Gemini_Generated_Image_vviqhpvviqhpvviq-removebg-preview.png" id="2_ms8ou"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_sldr6"]
+font_size = 51
+
+[node name="HardLevelv2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ms8ou")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_grui2")
+expand_mode = 1
+
+[node name="Dino Character" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -136.0
+offset_top = 270.0
+offset_right = 364.0
+offset_bottom = 770.0
+texture = ExtResource("2_ms8ou")
+flip_h = true
+
+[node name="SpeechBubble" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 236.0
+offset_top = 330.0
+offset_right = 634.0
+offset_bottom = 462.0
+
+[node name="LabelMinciuna" type="Label" parent="SpeechBubble"]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 73.0
+offset_right = 298.0
+offset_bottom = 146.0
+text = "Aici apare minciuna"
+autowrap_mode = 2
+
+[node name="OptionsContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.059000004
+anchor_bottom = 0.093
+offset_left = 701.0
+offset_top = 397.0
+offset_right = 1018.48
+offset_bottom = 502.761
+
+[node name="Button" type="Button" parent="OptionsContainer"]
+layout_mode = 2
+
+[node name="Button1" type="Button" parent="OptionsContainer"]
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="OptionsContainer"]
+layout_mode = 2
+
+[node name="FeedbackLabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 823.0
+offset_top = 467.0
+offset_right = 981.0
+offset_bottom = 546.0
+text = "Bravo!"
+label_settings = SubResource("LabelSettings_sldr6")

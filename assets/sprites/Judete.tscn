@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://y568rjt3p4ub"]
+[gd_scene load_steps=43 format=3 uid="uid://djjsketi7jb18"]
 
 [ext_resource type="Script" uid="uid://dm7d7qh01iuq0" path="res://piesa_puzzle.gd" id="1_r48ki"]
 [ext_resource type="Texture2D" uid="uid://dy10dhpreldhg" path="res://Arges.png" id="3_ptx1g"]

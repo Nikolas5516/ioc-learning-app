@@ -28,12 +28,19 @@ var unlocked_level: int = 1
 # Nodul Path2D (care contine toate nodurile PathFollow2D)
 @onready var path_node = get_node("LevelMap/Path2D") 
 
+@onready var customize_button = get_node("TopBar_HUD/CustomizeButton")
 
+var customization_scene = preload("res://scenes/Customization.tscn")  # A
 # --- FUNCȚII DE BAZĂ ---
 
 func _ready():
 	# Asigura-te ca butoanele sunt blocate/deblocate corect la inceput
 	update_level_locks()
+	if customize_button:
+		print("✅ Customize button found, connecting...")
+		customize_button.pressed.connect(_on_customize_button_pressed)
+	else:
+		print("⚠️ Customize button not found at specified path")
 
 
 # --- FUNCTII DE INPUT ȘI PANNING (SCROLLING) ---
@@ -41,6 +48,34 @@ func _ready():
 # Variabile pentru Panning
 var dragging: bool = false
 var last_mouse_pos: Vector2 = Vector2.ZERO
+
+func _on_customize_button_pressed():
+	print("🎨 Customize button pressed!")
+	
+	# Varianta 1: Încarcă scena ca modal (popup peste)
+	_open_customization_scene()
+	
+	
+func _open_customization_scene():
+	print("🎨 Opening customization scene...")
+	
+	# Varianta A: Încarcă ca scenă separată
+	#get_tree().change_scene_to_file("res://scenes/CustomizationScene.tscn")
+	
+	# Varianta B: Încarcă ca child (dacă vrei suprapus)
+	var customization_scene = preload("res://scenes/Customization.tscn")
+	var instance = customization_scene.instantiate()
+	
+	# # Asigură-te că instance-ul este adăugat corect
+	get_tree().current_scene.add_child(instance)
+	
+	# # FORȚEAZĂ procesarea
+	await get_tree().process_frame
+	await get_tree().process_frame
+	
+	# # Apelează manual setup-ul dacă e nevoie
+	# if instance.has_method("force_setup"):
+	#     instance.force_setup()
 
 func _input(event):
 	# Detecteaza inceputul si sfarsitul actiunii de tragere

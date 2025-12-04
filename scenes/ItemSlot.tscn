@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3 uid="uid://xirqc8flwvb7"]
+
+[ext_resource type="Script" uid="uid://boqyp8fskvfb7" path="res://scripts/ItemSlot.gd" id="1_v13n8"]
+
+[node name="ItemSlot" type="Button"]
+custom_minimum_size = Vector2(180, 220)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v13n8")
+
+[node name="BackgroundPanel" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(180, 220)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="EquippedIcon" type="TextureRect" parent="BackgroundPanel"]
+custom_minimum_size = Vector2(120, 10)
+layout_mode = 2
+size_flags_stretch_ratio = 1.62
+expand_mode = 1
+stretch_mode = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundPanel"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BackgroundPanel/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="NameLabel" type="Label" parent="BackgroundPanel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PriceLabel" type="Label" parent="BackgroundPanel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+
+[node name="item_icon" type="TextureRect" parent="BackgroundPanel/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5

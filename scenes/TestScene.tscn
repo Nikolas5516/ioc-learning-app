@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://drfyfqbw525f7"]
+
+[ext_resource type="PackedScene" uid="uid://drk4i1llrd3nj" path="res://scenes/HUD.tscn" id="1_2gju5"]
+[ext_resource type="Script" uid="uid://cjmvlouj333ss" path="res://scripts/TestScene.gd" id="1_rlkm5"]
+
+[node name="TestScene" type="Node2D"]
+position = Vector2(0, 3)
+script = ExtResource("1_rlkm5")
+
+[node name="HUD" parent="." instance=ExtResource("1_2gju5")]
+anchors_preset = 10
+anchor_right = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+
+[node name="Button" type="Button" parent="."]
+offset_left = 424.0
+offset_top = 164.0
+offset_right = 468.0
+offset_bottom = 206.0
+text = "Castiga 50 puncte"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

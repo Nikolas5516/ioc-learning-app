@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://d3eacjgjm6nbg"]
+[gd_scene load_steps=18 format=3 uid="uid://c13ueo0g36oox"]
 
 [ext_resource type="Script" uid="uid://dfbxso7m0nrnu" path="res://scenes/meniuprincipal.gd" id="1_r75mj"]
 [ext_resource type="Texture2D" uid="uid://q4ro38hddox2" path="res://assets/sprites/Gemini_Generated_Image_mk4fp5mk4fp5mk4f.png" id="2_utjw1"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://dle30j3vaddi" path="res://assets/sprites/Gemini_Generated_Image_2stjih2stjih2stj-removebg-preview.png" id="6_71ioe"]
 [ext_resource type="Texture2D" uid="uid://coflq7p7p1dwb" path="res://assets/sprites/Gemini_Generated_Image_jvwnzhjvwnzhjvwn-removebg-preview.png" id="7_ru4ck"]
 [ext_resource type="Texture2D" uid="uid://dt1nmdotxqseh" path="res://assets/sprites/Gemini_Generated_Image_9h0b0m9h0b0m9h0b-removebg-preview (1).png" id="8_orh1u"]
-[ext_resource type="PackedScene" uid="uid://b4qa5upc5qico" path="res://scenes/DinoTextBox.tscn" id="9_6kjbh"]
+[ext_resource type="PackedScene" path="res://scenes/DinoTextBox.tscn" id="9_6kjbh"]
 [ext_resource type="Texture2D" uid="uid://b7fklcwnh7ia2" path="res://assets/sprites/Gemini_Generated_Image_jztwxtjztwxtjztw-removebg-preview.png" id="10_jmxhm"]
 [ext_resource type="Texture2D" uid="uid://caxsayni05c0c" path="res://assets/sprites/Gemini_Generated_Image_puhdmjpuhdmjpuhd-removebg-preview.png" id="11_i36jf"]
 [ext_resource type="Texture2D" uid="uid://dn47nfripasdx" path="res://assets/sprites/Gemini_Generated_Image_i4suzii4suzii4su-removebg-preview.png" id="12_a61ng"]
@@ -158,3 +158,5 @@ metadata/_edit_lock_ = true
 layout_mode = 2
 texture_normal = ExtResource("15_mhfbr")
 metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="TopBar_HUD/CustomizeButton" to="." method="_on_customize_button_pressed"]

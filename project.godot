@@ -25,6 +25,10 @@ window/size/viewport_width=1280
 window/size/viewport_height=723
 window/stretch/mode="canvas_items"
 
+[editor]
+
+version_control/autoload_on_startup=true
+
 [rendering]
 
 renderer/rendering_method="mobile"

@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://drk4i1llrd3nj"]
+
+[ext_resource type="Script" uid="uid://ddkdf10yd7bnf" path="res://scripts/hud.gd" id="1_qpvh6"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 395.0
+offset_bottom = 141.0
+script = ExtResource("1_qpvh6")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="ScoreLabel" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2

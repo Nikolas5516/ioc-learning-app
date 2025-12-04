@@ -1,0 +1,138 @@
+[gd_scene load_steps=6 format=3 uid="uid://c15fqvim130b2"]
+
+[ext_resource type="Script" uid="uid://co1ysekghgh5q" path="res://scripts/Customization.gd" id="1_u8i1s"]
+[ext_resource type="Texture2D" uid="uid://bkr6bfp0a4udn" path="res://assets/clothes/dino_base.png" id="2_24hcf"]
+[ext_resource type="Texture2D" uid="uid://cwf2dp3urymms" path="res://assets/sprites/subtle-beige-gradient-background-rough-600nw-2653098969.webp" id="2_jhi71"]
+[ext_resource type="Texture2D" uid="uid://bcbjux6wkpn3s" path="res://assets/clothes/hat_cowboy.png" id="3_ebdm7"]
+[ext_resource type="Texture2D" uid="uid://5j788jgnwmtn" path="res://assets/clothes/scarf_red.png" id="4_jhi71"]
+
+[node name="Customization" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u8i1s")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_jhi71")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 1279.0
+offset_bottom = 726.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="ExitButton" type="Button" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+
+[node name="MainHBox" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="DinoPanel" type="Control" parent="MarginContainer/MainHBox"]
+custom_minimum_size = Vector2(700, 0)
+layout_mode = 2
+
+[node name="Hat_Slot" type="TextureRect" parent="MarginContainer/MainHBox/DinoPanel"]
+z_index = 2
+layout_mode = 1
+offset_left = 197.00003
+offset_top = 54.99999
+offset_right = 587.0
+offset_bottom = 335.0
+rotation = 0.3926991
+scale = Vector2(0.7102564, 0.6607143)
+texture = ExtResource("3_ebdm7")
+
+[node name="Base_Sprite" type="Sprite2D" parent="MarginContainer/MainHBox/DinoPanel"]
+position = Vector2(295, 362)
+texture = ExtResource("2_24hcf")
+
+[node name="Scarf_Slot" type="TextureRect" parent="MarginContainer/MainHBox/DinoPanel"]
+layout_mode = 0
+offset_left = 190.0
+offset_top = 315.0
+offset_right = 640.0
+offset_bottom = 765.0
+scale = Vector2(0.44888893, 0.4977778)
+texture = ExtResource("4_jhi71")
+
+[node name="ShopPanel" type="VBoxContainer" parent="MarginContainer/MainHBox"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+
+[node name="TopBar" type="HBoxContainer" parent="MarginContainer/MainHBox/ShopPanel"]
+layout_mode = 2
+
+[node name="ScoreLabel" type="Label" parent="MarginContainer/MainHBox/ShopPanel/TopBar"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="add_score_button" type="Button" parent="MarginContainer/MainHBox/ShopPanel/TopBar"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="StartTestButton" type="Button" parent="MarginContainer/MainHBox/ShopPanel/TopBar"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+
+[node name="Scroller" type="ScrollContainer" parent="MarginContainer/MainHBox/ShopPanel"]
+custom_minimum_size = Vector2(0, 600)
+layout_mode = 2
+draw_focus_border = true
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/MainHBox/ShopPanel/Scroller"]
+custom_minimum_size = Vector2(460, 600)
+layout_mode = 2
+size_flags_stretch_ratio = 10.0
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 30
+columns = 2
+
+[node name="ConfirmationPopup" type="Control" parent="."]
+layout_mode = 1
+anchor_left = 0.4
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+offset_right = -500.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="ConfirmationPopup"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanelContainer" type="PanelContainer" parent="ConfirmationPopup"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ConfirmationPopup/PanelContainer"]
+layout_mode = 2
+
+[node name="MessageLabel" type="Label" parent="ConfirmationPopup/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ConfirmationPopup/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="ConfirmButton" type="Button" parent="ConfirmationPopup/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+
+[node name="CancelButton" type="Button" parent="ConfirmationPopup/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2

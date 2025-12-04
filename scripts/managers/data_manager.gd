@@ -13,6 +13,17 @@ var current_score: int = 0
 signal score_updated(new_score)
 signal equip_changed() # Semnal NOU: Emis când echipamentul se schimbă
 
+#SETARI
+var audio_settings: Dictionary = {
+	"volume": 50.0,
+	"music": 50.0,
+	"sfx": 50.0
+}
+
+# Semnal pentru schimbarea setărilor audio
+signal audio_settings_changed()
+
+
 # --- INVENTAR ȘI CUSTOMIZARE ---
 
 # Dicționarul articolelor deblocate (true = deblocat/cumpărat)
@@ -42,6 +53,7 @@ func _ready():
 	load_questions()
 	load_game() # Încărcare date salvate la pornirea jocului
 	# test_data_manager()
+
 
 
 # ======================================================================
@@ -274,6 +286,7 @@ func save_game():
 		"current_score": current_score,
 		"unlocked_items": unlocked_items,
 		"equipped_items": equipped_items,
+		"audio_settings": audio_settings,
 	}
 	
 	# Folosim JSON.stringify pentru a converti dicționarul în text
@@ -303,10 +316,12 @@ func load_game():
 			current_score = parsed_data.get("current_score", current_score)
 			unlocked_items = parsed_data.get("unlocked_items", unlocked_items)
 			equipped_items = parsed_data.get("equipped_items", equipped_items)
+			audio_settings = parsed_data.get("audio_settings", audio_settings)
 			
 			# Notifică toate componentele (HUD, CustomDino) cu datele noi
 			score_updated.emit(current_score)
 			equip_changed.emit()
+			audio_settings_changed.emit()
 			
 			print("Joc încărcat. Scor: ", current_score)
 		else:
@@ -359,3 +374,25 @@ func test_data_manager():
 	# ... (restul logicii de test)
 	
 	# [LOGICA DE TESTARE NU ESTE INCLUSA AICI PENTRU BREVITATE, DAR POATE FI ADAUGATA INAPOI]
+	
+	
+#PENTRU SETARI:
+
+func get_audio_settings() -> Dictionary:
+	return audio_settings.duplicate()  # Returnăm o copie pentru siguranță
+
+func set_audio_settings(settings: Dictionary) -> void:
+	audio_settings = settings.duplicate()  # Salvăm o copie
+	save_game()  # Salvăm imediat
+	audio_settings_changed.emit()  # Notificăm că s-au schimbat
+	print("Setări audio salvate: ", audio_settings)
+
+func reset_audio_settings() -> void:
+	audio_settings = {
+		"volume": 50.0,
+		"music": 50.0,
+		"sfx": 50.0
+	}
+	save_game()  # Salvăm reset-ul
+	audio_settings_changed.emit()  # Notificăm
+	print("Setări audio resetate la 50%")

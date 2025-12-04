@@ -1,0 +1,88 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4e2bud7ji5pp"]
+
+[ext_resource type="Script" uid="uid://dyawaqvwp1oqj" path="res://scripts/settings_popup.gd" id="1_tyoec"]
+
+[node name="SettingsPopup" type="PopupPanel"]
+oversampling_override = 1.0
+initial_position = 2
+size = Vector2i(400, 400)
+visible = true
+script = ExtResource("1_tyoec")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 396.0
+offset_bottom = 396.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 21.0
+offset_top = 14.0
+offset_right = -22.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="TitleContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/TitleContainer"]
+layout_mode = 2
+text = "SETĂRI"
+horizontal_alignment = 1
+
+[node name="CloseButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/TitleContainer"]
+layout_mode = 2
+text = "x"
+
+[node name="VolumeContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/VolumeContainer"]
+layout_mode = 2
+text = "VOLUM"
+
+[node name="VolumeSlider" type="HSlider" parent="Panel/MarginContainer/VBoxContainer/VolumeContainer"]
+layout_mode = 2
+
+[node name="MusicContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/MusicContainer"]
+layout_mode = 2
+text = "MUZICĂ"
+
+[node name="MusicSlider" type="HSlider" parent="Panel/MarginContainer/VBoxContainer/MusicContainer"]
+layout_mode = 2
+
+[node name="SFXContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/MarginContainer/VBoxContainer/SFXContainer"]
+layout_mode = 2
+text = "EFECTE SONORE"
+
+[node name="SFXSlider" type="HSlider" parent="Panel/MarginContainer/VBoxContainer/SFXContainer"]
+layout_mode = 2
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+alignment = 2
+
+[node name="ResetButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+text = "RESETEAZĂ"
+
+[node name="ApplyButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+text = "APLICĂ"
+
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/TitleContainer/CloseButton" to="." method="_on_close_button_pressed"]

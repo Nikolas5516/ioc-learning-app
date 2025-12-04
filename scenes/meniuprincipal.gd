@@ -19,6 +19,10 @@ var unlocked_level: int = 1
 # ATENTIE: Ajusteaza path-urile nodurilor de mai jos daca sunt diferite!
 # Poti obtine calea (path) dand click dreapta pe nod in panoul Scena -> Copy Node Path.
 
+
+@onready var settings_button = get_node("TopBar_HUD/SettingsButton")  # Presupunând că ai un buton SettingsButton
+var settings_popup_scene = preload("res://scenes/SettingsPopup.tscn")
+
 # Nodul care contine Path2D si butoanele (LevelMap)
 @onready var level_map_node = get_node("LevelMap") 
 
@@ -41,8 +45,37 @@ func _ready():
 		customize_button.pressed.connect(_on_customize_button_pressed)
 	else:
 		print("⚠️ Customize button not found at specified path")
+	
+	if settings_button:
+		print("✅ Settings button found, connecting...")
+		settings_button.pressed.connect(_on_settings_button_pressed)
+	else:
+		print("⚠️ Settings button not found - check the path!")
 
 
+#FUNCTII PENTRU BUTONUL DE SETTINGS
+
+func _on_settings_button_pressed():
+	print("⚙️ Settings button pressed!")
+	_open_settings_popup()
+
+func _open_settings_popup():
+	print("📖 Opening settings popup...")
+	
+	# Creează instanța popup-ului
+	var settings_popup = settings_popup_scene.instantiate()
+	
+	# Configurează popup-ul
+	#settings_popup.popup_exclusive = true
+	settings_popup.size = Vector2(400, 400)
+	
+	# Adaugă popup-ul la scenă
+	add_child(settings_popup)
+	
+	# Afișează centrat pe ecran
+	settings_popup.popup_centered()
+	
+	print("✅ Settings popup opened successfully!")
 # --- FUNCTII DE INPUT ȘI PANNING (SCROLLING) ---
 
 # Variabile pentru Panning

@@ -79,14 +79,7 @@ layout_mode = 2
 [node name="ScoreLabel" type="Label" parent="MarginContainer/MainHBox/ShopPanel/TopBar"]
 custom_minimum_size = Vector2(100, 0)
 layout_mode = 2
-
-[node name="add_score_button" type="Button" parent="MarginContainer/MainHBox/ShopPanel/TopBar"]
-custom_minimum_size = Vector2(50, 0)
-layout_mode = 2
-
-[node name="StartTestButton" type="Button" parent="MarginContainer/MainHBox/ShopPanel/TopBar"]
-custom_minimum_size = Vector2(50, 0)
-layout_mode = 2
+horizontal_alignment = 2
 
 [node name="Scroller" type="ScrollContainer" parent="MarginContainer/MainHBox/ShopPanel"]
 custom_minimum_size = Vector2(0, 600)
@@ -100,39 +93,3 @@ size_flags_stretch_ratio = 10.0
 theme_override_constants/h_separation = 30
 theme_override_constants/v_separation = 30
 columns = 2
-
-[node name="ConfirmationPopup" type="Control" parent="."]
-layout_mode = 1
-anchor_left = 0.4
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -100.0
-offset_right = -500.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="ColorRect" type="ColorRect" parent="ConfirmationPopup"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="PanelContainer" type="PanelContainer" parent="ConfirmationPopup"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="VBoxContainer" type="VBoxContainer" parent="ConfirmationPopup/PanelContainer"]
-layout_mode = 2
-
-[node name="MessageLabel" type="Label" parent="ConfirmationPopup/PanelContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="ConfirmationPopup/PanelContainer/VBoxContainer"]
-layout_mode = 2
-
-[node name="ConfirmButton" type="Button" parent="ConfirmationPopup/PanelContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-
-[node name="CancelButton" type="Button" parent="ConfirmationPopup/PanelContainer/VBoxContainer/HBoxContainer"]
-layout_mode = 2

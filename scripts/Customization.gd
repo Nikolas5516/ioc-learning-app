@@ -16,7 +16,7 @@ var selected_item_data: Dictionary = {}
 
 func _ready():
 	print("=== CUSTOMIZATION START ===")
-	
+	_check_and_fix_background()
 	# Verifică nodurile
 	print("HatSlot:", "GĂSIT" if hat_slot else "NU")
 	print("ScarfSlot:", "GĂSIT" if scarf_slot else "NU")
@@ -41,21 +41,100 @@ func _ready():
 	else:
 		print("❌ DataManager nu este încărcat!")
 	
-	# Creează butonul pentru puncte de test
 	_create_test_points_button()
 	_create_test_points_button2()
+	
+	_create_simple_dino_title()
 	
 	#lock_all_items()
 	_create_exit_button()
 	await get_tree().process_frame
 	
-	# Inițializează
 	_update_score_display(DataManager.get_score())
 	_update_character_appearance()
 	_populate_shop()
 	
 	print("=== CUSTOMIZATION READY ===")
 	
+func _check_and_fix_background():
+	
+	var background = get_node_or_null("Background")
+	if not background:
+		background = get_node_or_null("TextureRect")
+		if not background:
+			background = get_node_or_null("MarginContainer/Background")
+	
+	if background:
+		print("✅ Found background node:", background.name)
+		
+		# Forțează vizibilitatea
+		background.visible = true
+		
+		# Forțează dimensiunile
+		background.size = get_viewport().size
+		
+		# Forțează redesenarea
+		background.queue_redraw()
+		
+		## Verifică dacă are textură
+		#if background is TextureRect:
+			#var texture_rect = background as TextureRect
+			#if texture_rect.texture == null:
+				#print("⚠️ Background has no texture! Loading default...")
+				## Încarcă o textură default
+				#var default_bg = preload("res://assets/backgrounds/default_bg.png")
+				#if default_bg:
+					#texture_rect.texture = default_bg
+				#else:
+					## Creează un fundal colorat de urgență
+					#texture_rect.texture = null
+					#texture_rect.modulate = Color(0.2, 0.3, 0.4, 1.0)
+	#else:
+		#print("❌ No background node found! Creating emergency background...")
+		#_create_emergency_background()
+
+func _create_emergency_background():
+	# Creează un fundal de urgență
+	var emergency_bg = ColorRect.new()
+	emergency_bg.name = "EmergencyBackground"
+	emergency_bg.color = Color(0.1, 0.2, 0.3, 1.0)  # Albastru închis
+	emergency_bg.anchor_left = 0.0
+	emergency_bg.anchor_right = 1.0
+	emergency_bg.anchor_top = 0.0
+	emergency_bg.anchor_bottom = 1.0
+	
+	# Pune-l în spatele tuturor
+	add_child(emergency_bg)
+	move_child(emergency_bg, 0)
+	
+	print("✅ Created emergency background")
+
+func _create_simple_dino_title():
+	"""Creează doar textul fără casetă decorativă"""
+	
+	var title_label = Label.new()
+	title_label.name = "DinoTitleSimple"
+	title_label.text = "Dulapul lui Dino"
+	title_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	
+	# Stil verde închis frumos
+	var label_settings = LabelSettings.new()
+	label_settings.font_size = 36
+	label_settings.font_color = Color("#006400")  # Verde închis
+	
+	# Adaugă umbră pentru vizibilitate
+	title_label.add_theme_constant_override("shadow_offset_x", 2)
+	title_label.add_theme_constant_override("shadow_offset_y", 2)
+	title_label.add_theme_color_override("font_shadow_color", Color(0, 0, 0, 0.5))
+	
+	title_label.label_settings = label_settings
+	
+	# Adaugă la panoul Dino
+	var dino_panel = get_node_or_null("MarginContainer/MainHBox/DinoPanel")
+	if dino_panel:
+		title_label.position = Vector2(300, 50)
+		dino_panel.add_child(title_label)
+		print("✅ Text simplu 'Dulapul lui Dino' adăugat")
 
 func lock_all_items():
 	"""Blochează toate itemele (cu excepția celor default)"""
@@ -328,7 +407,7 @@ func _create_item_button(item_id: String, item_data: Dictionary) -> Control:
 	var normal_style = StyleBoxFlat.new()
 	
 	if is_equipped:
-		normal_style.bg_color = Color(0.3, 0.6, 0.3, 1.0)  # Verde când e echipat
+		normal_style.bg_color = Color(0.3, 0.8, 0.3, 1.0)  # Verde când e echipat
 	else:
 		normal_style.bg_color = Color(0.5, 0.3, 0.2, 1.0)  # Maro când nu e echipat
 	
@@ -344,7 +423,7 @@ func _create_item_button(item_id: String, item_data: Dictionary) -> Control:
 	
 	var hover_style = normal_style.duplicate()
 	if is_equipped:
-		hover_style.bg_color = Color(0.4, 0.7, 0.4, 1.0)  # Verde mai deschis
+		hover_style.bg_color = Color(0.1, 0.6, 0.1, 1.0)  # Verde mai deschis
 		hover_style.border_color = Color(0.9, 0.9, 0.9, 1.0)
 	else:
 		hover_style.bg_color = Color(0.6, 0.4, 0.3, 1.0)  # Maro mai deschis

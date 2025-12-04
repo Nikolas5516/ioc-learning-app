@@ -143,3 +143,10 @@ const MAX_X_POS: float = 0
 const MIN_Y_POS: float = 30
 # MAX_Y_POS: Cea mai mare valoare (miscarea maxima in jos)
 const MAX_Y_POS: float = 300
+
+
+const SCENA_MENIU = "res://scenes/levels/HardLevel/LevelHard.tscn"
+
+func _play_button_pressed(): 
+	get_tree().change_scene_to_file(SCENA_MENIU)
+	

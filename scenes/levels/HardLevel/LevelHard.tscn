@@ -1,0 +1,94 @@
+[gd_scene load_steps=7 format=3 uid="uid://cwg3ofku5y2hh"]
+
+[ext_resource type="Script" uid="uid://doqjfynlblpj3" path="res://scenes/levels/HardLevel/flashcards.gd" id="1_wd4r5"]
+[ext_resource type="AudioStream" uid="uid://cv0h67ye517gc" path="res://assets/audio/607926__robinhood76__10661-bonus-correct-answer.wav" id="2_q481k"]
+[ext_resource type="AudioStream" uid="uid://d20dpsq65jlkh" path="res://assets/audio/483598__raclure__wrong.mp3" id="3_0ijik"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wd4r5"]
+bg_color = Color(1, 0.972549, 0.88235295, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ndv2m"]
+bg_color = Color(0.99624985, 0.00744602, 3.85046e-07, 0.72156864)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q481k"]
+bg_color = Color(0, 0.78431374, 0, 1)
+
+[node name="LevelHard" type="Node2D"]
+script = ExtResource("1_wd4r5")
+
+[node name="CenterCard" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CardMargin" type="Panel" parent="CenterCard"]
+custom_minimum_size = Vector2(300, 600)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_wd4r5")
+
+[node name="MarginContainer" type="MarginContainer" parent="CenterCard/CardMargin"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = -150.0
+offset_right = 70.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterCard/CardMargin/MarginContainer"]
+layout_mode = 2
+
+[node name="CardLabel" type="Label" parent="CenterCard/CardMargin/MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0.85, 0.85)
+layout_direction = 3
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(0, 0.6, 0.29803923, 1)
+theme_override_font_sizes/font_size = 26
+text = "(loading...) here the text will be "
+horizontal_alignment = 1
+vertical_alignment = 3
+autowrap_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterCard/CardMargin/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="FalseButton" type="Button" parent="CenterCard/CardMargin/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ndv2m")
+text = "Fals"
+
+[node name="TrueButton" type="Button" parent="CenterCard/CardMargin/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_q481k")
+text = "Adevarat"
+
+[node name="Feedback" type="Label" parent="CenterCard/CardMargin/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CorrectSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_q481k")
+
+[node name="IncorrectSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_0ijik")
+
+[connection signal="pressed" from="CenterCard/CardMargin/MarginContainer/VBoxContainer/HBoxContainer/FalseButton" to="." method="_on_false_button_pressed"]
+[connection signal="pressed" from="CenterCard/CardMargin/MarginContainer/VBoxContainer/HBoxContainer/TrueButton" to="." method="_on_true_button_pressed"]

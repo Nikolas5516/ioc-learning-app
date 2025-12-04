@@ -1,0 +1,155 @@
+[gd_scene load_steps=10 format=3 uid="uid://d16v12236fsg4"]
+
+[ext_resource type="Texture2D" uid="uid://co4xn81i3e4e" path="res://assets/sprites/harta_muta2.png" id="1_7q0l7"]
+[ext_resource type="Script" uid="uid://ddl35ray25lqw" path="res://scenes/levels/HardLevel/map_game.gd" id="1_dmib1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uhtaw"]
+radius = 30.265491
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h2euh"]
+radius = 31.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j6fee"]
+radius = 23.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jpvam"]
+radius = 22.090721
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tfykf"]
+radius = 29.068884
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a5whi"]
+radius = 35.35534
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4uq8i"]
+radius = 31.04835
+
+[node name="MapGame" type="Node2D"]
+script = ExtResource("1_dmib1")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 755.0
+mouse_filter = 2
+texture = ExtResource("1_7q0l7")
+
+[node name="Area_A" type="Area2D" parent="TextureRect"]
+position = Vector2(423, 238)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area_A"]
+position = Vector2(10, 3)
+shape = SubResource("CircleShape2D_uhtaw")
+
+[node name="Area_B" type="Area2D" parent="TextureRect"]
+position = Vector2(665, 606)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area_B"]
+shape = SubResource("CircleShape2D_h2euh")
+
+[node name="Area_C" type="Area2D" parent="TextureRect"]
+position = Vector2(773, 203)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area_C"]
+position = Vector2(4, 0)
+shape = SubResource("CircleShape2D_j6fee")
+
+[node name="Area_D" type="Area2D" parent="TextureRect"]
+position = Vector2(202, 399)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area_D"]
+shape = SubResource("CircleShape2D_jpvam")
+
+[node name="Area_E" type="Area2D" parent="TextureRect"]
+position = Vector2(869, 562)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area_E"]
+shape = SubResource("CircleShape2D_tfykf")
+
+[node name="Area_F" type="Area2D" parent="TextureRect"]
+position = Vector2(781, 313)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area_F"]
+position = Vector2(9, -4)
+shape = SubResource("CircleShape2D_a5whi")
+
+[node name="Area_H" type="Area2D" parent="TextureRect"]
+position = Vector2(499, 132)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/Area_H"]
+shape = SubResource("CircleShape2D_4uq8i")
+
+[node name="Answer_List" type="VBoxContainer" parent="TextureRect"]
+layout_mode = 0
+offset_left = 901.0
+offset_top = 50.0
+offset_right = 1107.0
+offset_bottom = 396.0
+
+[node name="Button_A" type="Button" parent="TextureRect/Answer_List"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Button A - Cluj Napoca "
+autowrap_mode = 2
+icon_alignment = 1
+
+[node name="Button_B" type="Button" parent="TextureRect/Answer_List"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Button B - Bucuresti"
+
+[node name="Button_C" type="Button" parent="TextureRect/Answer_List"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Button C - Iasi"
+
+[node name="Button_D" type="Button" parent="TextureRect/Answer_List"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Button D - Timisoara"
+
+[node name="Button_E" type="Button" parent="TextureRect/Answer_List"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Button E - Podisul Dobrogei "
+
+[node name="Button_F" type="Button" parent="TextureRect/Answer_List"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Button F - Podisul Moldovei "
+
+[node name="Button_H" type="Button" parent="TextureRect/Answer_List"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Button H - Muntii Maramuresului "
+autowrap_mode = 2
+
+[node name="Button_W1" type="Button" parent="TextureRect/Answer_List"]
+layout_mode = 2
+size_flags_vertical = 3
+text = "Button W1 - wrong option no. 1 "
+
+[node name="Feedback_Label" type="Label" parent="TextureRect"]
+visible = false
+layout_mode = 0
+offset_left = 72.0
+offset_top = 599.0
+offset_right = 224.0
+offset_bottom = 680.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "\" \""
+
+[connection signal="input_event" from="TextureRect/Area_A" to="." method="_on_map_area_clicked" binds= ["A"]]
+[connection signal="input_event" from="TextureRect/Area_B" to="." method="_on_map_area_clicked" binds= ["B"]]
+[connection signal="input_event" from="TextureRect/Area_C" to="." method="_on_map_area_clicked" binds= ["C"]]
+[connection signal="input_event" from="TextureRect/Area_D" to="." method="_on_map_area_clicked" binds= ["D"]]
+[connection signal="input_event" from="TextureRect/Area_E" to="." method="_on_map_area_clicked" binds= ["E"]]
+[connection signal="input_event" from="TextureRect/Area_F" to="." method="_on_map_area_clicked" binds= ["F"]]
+[connection signal="input_event" from="TextureRect/Area_H" to="." method="_on_map_area_clicked" binds= ["H"]]
+[connection signal="pressed" from="TextureRect/Answer_List/Button_A" to="." method="_on_answer_button_pressed" binds= ["Cluj-Napoca"]]
+[connection signal="pressed" from="TextureRect/Answer_List/Button_B" to="." method="_on_answer_button_pressed" binds= ["Bucuresti"]]
+[connection signal="pressed" from="TextureRect/Answer_List/Button_C" to="." method="_on_answer_button_pressed" binds= ["Iasi"]]
+[connection signal="pressed" from="TextureRect/Answer_List/Button_D" to="." method="_on_answer_button_pressed" binds= ["Timisoara"]]
+[connection signal="pressed" from="TextureRect/Answer_List/Button_E" to="." method="_on_answer_button_pressed" binds= ["Podisul Dobrogei"]]
+[connection signal="pressed" from="TextureRect/Answer_List/Button_F" to="." method="_on_answer_button_pressed" binds= ["Podisul Moldovei"]]
+[connection signal="pressed" from="TextureRect/Answer_List/Button_H" to="." method="_on_answer_button_pressed" binds= ["Muntii Maramuresului"]]
+[connection signal="pressed" from="TextureRect/Answer_List/Button_W1" to="." method="_on_answer_button_pressed"]

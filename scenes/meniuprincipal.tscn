@@ -158,3 +158,5 @@ metadata/_edit_lock_ = true
 layout_mode = 2
 texture_normal = ExtResource("15_mhfbr")
 metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="LevelMap/Path2D/lvl3/Level 3" to="." method="_play_button_pressed"]

@@ -11,7 +11,7 @@ const FINAL_CHEST_INDEX: int = 6
 
 # Variabila care stocheaza nivelul maxim deblocat de jucator (pentru test, incepem cu 1)
 # ATENTIE: In jocul final, aceasta variabila trebuie incarcata dintr-un sistem de salvare!
-var unlocked_level: int = 1 
+var unlocked_level: int = 3 
 
 
 # --- REFERINȚE NODURI ȘI SCROLLING ---

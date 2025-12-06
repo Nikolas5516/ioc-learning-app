@@ -12,7 +12,6 @@
 	"attempts_allowed": 3,
 	"points": 10
   },
-  [
   {
 	"id": 7,
 	"level_id": 7,
@@ -173,6 +172,4 @@
 	"false_statement": "Clujul este orașul cu cea mai mare populație din România",
 	"points": 15
   }
-]
-
 ]
